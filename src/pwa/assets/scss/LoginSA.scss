@@ -1,0 +1,280 @@
+@import "../../../assets/scss/mixin";
+
+.login-form-sa {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // background: url(../img/bg.jpg) no-repeat center center/cover;
+  // =================== JEAN ===================//
+  background: url(../img/login/login_bg.png) no-repeat center center/cover;
+  // =================== JEAN ===================//
+
+  .login-form {
+    &-wrap {
+      // margin: auto;
+      margin: auto;
+      width: 466px + 20px * 2;
+      padding: 50px 24px;
+    }
+    &-outer {
+      .load-spin {
+        @include radius(10px);
+        background: none;
+      }
+      overflow: hidden;
+    }
+    &-inner {
+      padding: 60px 20px 43px;
+      @media screen and (min-width: 520px) {
+        padding: 40px 50px;
+      }
+    }
+  }
+  // =================== JEAN ===================//
+  .divider {
+    text-align: center;
+    position: relative;
+    color: #a3cff8;
+    font-size: 12px;
+    margin-bottom: 10px;
+    &:before {
+      position: absolute;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        rgba(82, 164, 235, 0.2637) 11%,
+        rgba(82, 164, 235, 0.5158) 24%,
+        rgba(105, 170, 232, 1) 57%,
+        rgba(105, 170, 232, 0.7119) 89%,
+        rgba(105, 170, 232, 0.32217) 95%
+      );
+      width: 125px;
+      height: 1px;
+      top: 50%;
+      left: 0;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        rgba(105, 170, 232, 0.34217) 5%,
+        rgba(105, 170, 232, 0.7119) 11%,
+        rgba(105, 170, 232, 1) 43%,
+        rgba(82, 164, 235, 0.5158) 68%,
+        rgba(82, 164, 235, 0.2637) 89%
+      );
+      width: 125px;
+      height: 1px;
+      top: 50%;
+      right: 0;
+    }
+    @media screen and (max-width: 375px) {
+      &::before,
+      &:after {
+        width: 100px;
+      }
+    }
+  }
+
+  .sub-logo {
+    background: url(../img/login/FC-Augsburg_logo.svg) no-repeat center
+      center/contain;
+    margin: 12px auto 5px;
+    @include size(25px, 32px);
+  }
+  .sub-text {
+    color: #a3cff8;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .ui-tabs {
+    box-shadow: none;
+    background: none;
+    margin: 0 0 20px;
+    &:after {
+      border: 1px solid #fff;
+    }
+    .ui-tabs--tab {
+      padding: 11px;
+      color: #fff;
+      font-weight: normal;
+      font-size: 19px;
+      &.active {
+        color: #46aef7;
+        background: linear-gradient(-90deg, #1dd5e6, #46aef7);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    .ui-tabs--selector {
+      box-shadow: none;
+      background: #fff;
+      height: 50px;
+      top: 1px;
+    }
+    // =================== JEAN ===================//
+  }
+  .logo {
+    // margin: 0 auto 30px auto;
+    // background: url(../../../assets/img/login/logo.png) no-repeat center center/cover;
+    // @include size(171px, 60px);
+    // =================== JEAN ===================//
+    margin: 0 auto 10px auto;
+    background: url(../img/login/ubet_white_text_logo.svg) no-repeat center
+      center/cover;
+    @include size(141px, 54px);
+    // =================== JEAN ===================//
+    background-size: contain;
+  }
+  .form {
+    text-align: center;
+    &-inner {
+      text-align: left;
+    }
+    .restore-wrap {
+      margin: 20px 0 0;
+    }
+    button.submit {
+      width: 100%;
+      font-weight: 400;
+      padding: 11px;
+      @include radius(25px);
+      @include gradient2(100deg, #e1deda, #dddcd7 45%, #d2cec7 100%);
+      color: #bcb8b8;
+      font-size: 19px;
+    }
+    button.submit.active {
+      color: #fff;
+      @include gradient2(0deg, #a1c4fd, #c2e9fb 100%);
+    }
+
+    // =================== JEAN ===================//
+    a {
+      // color: #16885f;
+      // font-size: 21px;
+      // font-weight: 400;
+      line-height: 17px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    // =================== JEAN ===================//
+    .form-field {
+      margin: 0 0 20px;
+    }
+    label {
+      display: none;
+    }
+
+    .form-field--input-wrap {
+      position: relative;
+      input {
+        padding-left: 70px;
+        padding-right: 45px;
+        border-radius: 30px;
+        background: none;
+        color: #fff;
+        font-size: 15px;
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+        &:-webkit-autofill {
+          // background: red;
+          -webkit-text-fill-color: #fff;
+          -webkit-text-fill-color: none;
+          -webkit-box-shadow: 0 0 0px 1000px #fff0 inset;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+      }
+      input[type="password"] {
+        font: 15px Verdana, sans-serif !important;
+        letter-spacing: 1px;
+        height: 44px;
+      }
+      span {
+        content: "";
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        filter: brightness(0) invert(1);
+      }
+      span.username {
+        background: url(../img/login/user.svg) no-repeat center center/contain;
+        // mask-image: url(../img/login/user.svg);
+      }
+      span.password,
+      span.passwordok {
+        background: url(../img/login/password.svg) no-repeat center
+          center/contain;
+      }
+
+      span.eye {
+        background: url(../img/login/show-password.svg) no-repeat center
+          center/contain;
+        right: 20px;
+        left: unset;
+        opacity: 0.5;
+        padding: 9px;
+        width: 19px;
+        height: 11px;
+        &.vision {
+          opacity: 1;
+        }
+      }
+
+      span.telephone {
+        background: url(../img/login/cellphone.svg) no-repeat center
+          center/contain;
+      }
+      span.agentName {
+        background: url(../img/login/referral.svg) no-repeat center
+          center/contain;
+      }
+    }
+    // =================== JEAN ===================//
+  }
+  .auth-forms {
+    display: flex;
+    align-items: flex-start;
+    @include transition(transform 0.2s ease);
+    .form {
+      min-width: 100%;
+      opacity: 0;
+      pointer-events: none;
+      @include transition(opacity 0.2s ease);
+    }
+    &.tab--signin {
+      //   height: 317px;
+      .form--signin {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+    &.tab--signup {
+      @include transform(translateX(-100%));
+      .form--signup {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+.login-form-sa {
+  .auth-tabs {
+    .ui-tabs--tab {
+      font-size: 19px;
+    }
+  }
+}

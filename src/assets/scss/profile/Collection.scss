@@ -1,0 +1,260 @@
+
+.profile-collection{
+    .profile-desktop-tab{
+        box-shadow: 0px 1px 5.52px 2.48px rgba(0, 0, 0, 0.02);
+        .profile-desktop-tab-header{
+            background-image: linear-gradient(#c3cfe2, #f5f7fa);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            display: flex;
+            padding: 11px 24px;
+            justify-content: center;
+            align-items: center;
+            .profile-desktop-tab-head-item {
+                margin: 0 45px;
+                span {
+                    color: #4796ff;
+                    font-size: 14px;
+                    cursor: pointer;
+                    &.active{
+                        color: #fc686f;
+                        background: linear-gradient(-46deg, #ff934c, #fc686f);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    .profile-desktop-tab-body {
+        min-height: 670px;
+        max-height: 670px;
+        background: #fff;
+        position: relative;
+        .profile-desktop-tab-col {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+            transition: all .2s ease-in-out;
+            &.active{
+                opacity: 1;
+                z-index: 2;
+            }
+            .collection-card-item {
+                display: flex;
+                font-size: 14px;
+                color: #39404d;
+                padding: 18.5px 30px;
+                border-bottom: 1px solid #f1efef;
+                .cl-item {
+                    flex-grow: 1;
+                    flex-basis: 0;
+                    display: flex;
+                    align-items: center;
+                    &.collection-card-text{
+
+                    }
+                    &.collection-card-value{
+                        justify-content: center;
+                    }
+                    &.collection-card-button{
+                        justify-content: flex-end;
+                        button{
+                            outline: none;
+                            width: 89px;
+                            height: 29px;
+                            border-radius: 5px;
+                            background: #e8e9eb;
+                            font-size: 14px;
+                            color: #cdd0d5;
+                        }
+                    }
+                }
+                &.active{
+                    .collection-card-button{
+                        button{
+                            color: #fff;
+                            background-image: linear-gradient(-46deg, #04a0f9, #08b1f9);
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+
+        .col-bonus-box-wrap {
+            display: flex;
+            min-height: 100%;
+            justify-content: center;
+            align-items: center;
+            .col-bonus-box-wrap-cont {
+                max-width: 415px;
+                width: 100%;
+                padding-top: 113px;
+                .col-bonus-box-wrapper {
+                    position: relative;
+                }
+                .col-bonus-box-icon {
+                    position: absolute;
+                    width: 126px;
+                    height: 126px;
+                    border-radius: 100%;
+                    background: linear-gradient( 135deg, rgb(236,237,234) 0%, rgb(248,248,246) 50%, rgb(220,219,216) 100%);
+                    box-shadow: 0px 1px 5.52px 2.48px rgba(0, 0, 0, 0.1);
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1;
+                    i{
+                        display: inline-block;
+                        z-index: 1;
+                        &.grab{
+                            background: url(../../../pwa/assets/img/collection/red-envelope.svg) no-repeat center center/cover;
+                            width: 77px;
+                            height: 77px;
+                        }
+                        &.monthly{
+                            background: url(../../../pwa/assets/img/collection/monthly-bonus.svg) no-repeat center center/cover;
+                            width: 78px;
+                            height: 78px;
+                        }
+                        &.gift{
+                            background: url(../../../pwa/assets/img/collection/gift-bonus.svg) no-repeat center center/cover;
+                            width: 76px;
+                            height: 86px;
+                        }
+                    }
+                    &:after {
+                        content: "";
+                        background: url(../../../pwa/assets/img/collection/confetti.svg) no-repeat center center/cover;
+                        width: 256px;
+                        height: 189px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    
+                }
+                .col-bonus-box {
+                    padding-top: 90px;
+                    padding-bottom: 20px;
+                    font-size: 14px;
+                    border-radius: 15px;
+                    background: linear-gradient(90deg, #f5f7fa 0%, #ecedef 100%);
+                    box-shadow: 0px 1px 6.21px 2.79px rgba(0, 0, 0, 0.06);
+                    text-align: center;
+                    position: relative;
+                    &.col-pao-box{
+                        background-image: linear-gradient(90deg, #b63535 0%, #e11616 100%);
+                        height: 465px;
+                        overflow: hidden;
+                        .col-pao-box-body {
+                            position: relative;
+                            z-index: 1;
+                            .col-pao-caption {
+                              font-size: 14px;
+                              color: #dfe119;
+                            }
+                            .col-pao-value {
+                              color: #dfe119;
+                              font-size: 16px;
+                              display: inline-block;
+                              border: 1px solid rgba(255, 255, 255, 0.15);
+                              padding: 3.5px 40.5px;
+                              border-radius: 17px;
+                              margin-top: 22px;
+                              span {
+                                font-size: 22px;
+                              }
+                            }
+                        }
+                          .col-pao-box-clip {
+                            background: url(../../../pwa/assets/img/collection/red-env-clip.png) no-repeat center center/cover;
+                            width: calc(100% + 20px);
+                            height: 265px;
+                            position: absolute;
+                            top: -10px;
+                            left: -10px;
+                        }
+                          .col-pao-box-chip {
+                            background-image: linear-gradient( 90deg, rgba(247, 203, 107, 0.99608) 0%, rgb(251, 169, 128) 100%);
+                            width: 108px;
+                            height: 108px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            z-index: 2;
+                            font-size: 14px;
+                            color: #39404d;
+                            position: absolute;
+                            left: 50%;
+                            top: 190px;
+                            transform: translateX(-50%);
+                        }
+                          .col-pao-box-yuan {
+                            background: url(../../../pwa/assets/img/collection/yuan.svg) no-repeat center center/cover;
+                            width: 108px;
+                            height: 108px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            z-index: 2;
+                            font-size: 14px;
+                            color: #39404d;
+                            position: absolute;
+                            left: 50%;
+                            top: 190px;
+                            transform: translateX(-50%);
+                        }
+                    }
+                    .col-bonus-box-title {
+                        color: #46aef7;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+                    .col-bonus-box-span {
+                        text-align: center;
+                        margin-bottom: 30px;
+                        span{
+                            color: #46aef7;
+                            margin-left: 10px;
+                        }
+                    }
+                                        
+                    .col-bonus-box-action {
+                        width: 195px;
+                        height: 52px;
+                        margin: auto;
+                        position: relative;
+                        background: url(../../../pwa/assets/img/collection/bonus-apply_btn.svg) no-repeat center center/cover;
+                        &.redeemed{
+                            background: url(../../../pwa/assets/img/collection/bonus-redeemed_btn.svg) no-repeat center center/cover;
+                        }
+                        span{
+                            color: #fff;
+                            font-size: 14px;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            padding: 6px 60px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

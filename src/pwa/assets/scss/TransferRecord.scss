@@ -1,0 +1,138 @@
+@import "../../../assets/scss/mixin";
+
+.transfer-record-wrap {
+  .transfer-record-wrap-inner {
+    padding-bottom: 100px;
+  }
+
+  .transfer-record-card-head {
+    background-image: linear-gradient(#c3cfe2, #f5f7fa);
+    padding: 10px 19px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    .transfer-record-card-title {
+      color: #4796ff;
+      font-size: 14px;
+      span {
+        border: 1px solid #4796ff;
+        width: 103px;
+        display: block;
+        text-align: center;
+        border-radius: 13px;
+        padding: 2px;
+      }
+      i {
+        background: url(../img/refresh.svg) no-repeat center center/contain;
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        position: absolute;
+        right: 19px;
+        top: 50%;
+        transform: translateY(-50%);
+        &.reload {
+          -webkit-animation: rotation 2s infinite linear;
+        }
+      }
+      @keyframes rotation {
+        from {
+          transform: translateY(-50%) rotate(0deg);
+        }
+        to {
+          transform: translateY(-50%) rotate(359deg);
+        }
+      }
+    }
+  }
+  .transfer-record-card-body {
+    .no-transactions {
+      height: 416px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #95969a;
+      padding-top: 66px;
+      .image-box {
+        background: url("../img/profile/svg/open-box.svg") no-repeat center
+          center/contain;
+        width: 158px;
+        height: 137px;
+        display: inline-block;
+        margin-bottom: 23px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+    .transfer-record-card-item {
+      padding: 19px 33px;
+      border-bottom: 1px solid #f1efef;
+      border-left: 1px solid #f1efef;
+      border-right: 1px solid #f1efef;
+      background: #fff;
+      .cl-item {
+        display: inline-block;
+        width: 50%;
+        font-size: 12px;
+        &.transfer-record-card-text {
+          text-align: left;
+          color: #95969a;
+          span:last-child {
+            margin-left: 25px;
+            position: relative;
+            &:before {
+              background: url(../img/transfer-record/wallet-transfer-arrow.svg)
+                no-repeat center center/contain;
+              width: 10px;
+              height: 10px;
+              content: "";
+              position: absolute;
+              left: -16px;
+              top: 3px;
+            }
+          }
+        }
+        &.transfer-record-card-value {
+          float: right;
+          min-width: 75px;
+          width: auto;
+          text-align: left;
+          p {
+            &.cl-card-amount {
+              color: #ff934c;
+              span {
+                color: #fc686f;
+              }
+            }
+            &.cl-card-status {
+              &.success {
+                color: #5bb374;
+              }
+              &.failure {
+                color: #f15151;
+              }
+            }
+          }
+        }
+      }
+      // .transfer-record-card-text , .transfer-record-card-value {
+      // 	font-size: 14px;
+      // }
+      // .transfer-record-card-button button {
+      // 	width: 89px;
+      // 	height: 29px;
+      // 	border-radius: 5px;
+      // 	background: #e8e9eb;
+      // 	font-size: 14px;
+      // 	color: #cdd0d5;
+      // }
+      // &.active .transfer-record-card-button button {
+      // 	color: #fff;
+      // 	background-image: linear-gradient(-46deg, #04a0f9,#08b1f9);
+
+      // }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@import "../../../assets/scss/mixin";
+@import "../scss/variables.scss";
+
+@font-face {
+  font-family: Microsoft Yahei regular;
+  src: url(../fonts/microsoft-yahei.ttf);
+}
+
+html:lang(zh) body {
+  // font-size: 12px;
+  font-family: "Microsoft Yahei regular !important";
+}
+
+body.body-pwa {
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+body.pwa-home-page {
+  .app-sa {
+    padding: #{$head}px 0 0;
+    @media screen and (min-width: 767px) {
+      padding: #{$head-tablet}px 0 0;
+    }
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+  // pointer-events: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.app-sa {
+  height: 100vh;
+  min-width: 320px;
+  background-color: #f7f7f7;
+  .app-sa-head {
+    min-width: 320px;
+    max-height: #{$head}px;
+    @media screen and (min-width: 767px) {
+      max-height: #{$head-tablet}px;
+    }
+    background-image: url(../img/home/_background/home_bg.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    overflow: hidden;
+    @include radius(0 0 40px 40px);
+    @include shadow(0px 1px 5.52px 2.48px rgba(0, 0, 0, 0.05));
+    @include position(
+      fixed,
+      $z-index: 998,
+      $top: 0,
+      $left: 0,
+      $right: 0,
+      $bottom: auto
+    );
+  }
+  .app-sa-head::after {
+    content: "";
+    background-color: #fff;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  .app-sa-header {
+    min-width: 320px;
+    padding: 10px 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      width: 107px;
+      height: 40px;
+      background: url(../../../assets/img/png/logo.png) no-repeat center
+        center/cover;
+    }
+  }
+  .app-sa-ticker {
+    white-space: nowrap;
+    position: relative;
+    height: 23px;
+    padding: 0 12px;
+    cursor: pointer;
+    .ticker {
+      p {
+        color: #46aef7;
+        font-size: 14px;
+      }
+    }
+  }
+
+  // TOOL TIP
+  .tool-tip-copied {
+    position: absolute;
+    display: none;
+    background: rgba(66, 66, 66, 0.72);
+    color: #fff;
+    width: 114px;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 10px;
+    right: -90px;
+    bottom: 35px;
+    font-size: 14px;
+    &.show {
+      display: block;
+    }
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 15px solid rgba(66, 66, 66, 0.72);
+      position: absolute;
+      top: calc(100% - 5px);
+      left: -5px;
+      transform: rotate(34deg);
+    }
+    @media screen and (max-width: 375px) {
+      right: -60px;
+    }
+  }
+}

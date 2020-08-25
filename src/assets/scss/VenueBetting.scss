@@ -1,0 +1,985 @@
+@import '_mixin';
+
+.venue-betting {
+	max-width: 1200px;
+	margin: 0 auto 180px;
+	.head-block{
+		.head-title {
+			color: #46aef7;
+			font-size: 49.4px;
+			position: relative;
+			display: inline-block;
+			margin-bottom: 10px;
+			&span {
+				font-size: 49.4px;
+				position: relative;
+				top: -7px;
+				margin-left: 11px;
+			}
+		}
+		.head-sub {
+			color: #ecf0fc;
+			font-size: 24.56px;
+			font-family: Metropolis;
+		}
+
+	}
+
+	.hero--diagonal {
+		position: relative;
+	    width: 250px;
+		display: inline-block;
+		&::before {
+		//   content: '';
+		//   position: absolute;
+		//   top: -50px;
+		//   left: 0;
+		//   width: 100%;
+		//   height: calc(100% + 100px);
+		//   clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 50px;
+			background-image: linear-gradient(-46deg, #68e6f2 72%, #6bbdf6);
+			transform: rotate(-11deg) skewY(11deg);
+		}
+	  
+		// .hero__content {
+		//   position: relative;
+		//   z-index: 1;
+		// }
+	}
+
+
+	.venue-betting-body{
+		position: relative;
+		.v-tab-wrap {
+			position: relative;
+			display: inline-block;
+			width: 380px;
+			height: 708px;
+			margin-top: 85px;
+			// background: #000;
+			.v-tab {
+				position: relative;
+				width: 188px;
+				padding: 18px 0;
+				text-align: center;
+				margin-bottom: 56px;
+				z-index: 2;
+				&:first-child{
+					margin-top: 48px;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+				&:nth-child(1){
+					margin-left: 62px;
+				}
+				&:nth-child(2){
+					margin-left: 108px;
+				}
+				&:nth-child(3){
+					margin-left: 155px;
+				}
+				&:nth-child(4){
+					margin-left: 158px;
+				}
+				&:nth-child(5){
+					margin-left: 120px;
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 100%;
+					background-color: #fff;
+					transform: rotate(-11deg) skewY(11deg);
+					box-shadow: 0px 0px 27px 0 rgba(26, 118, 182, .33);
+					transition: background-color .8s ease-in-out;
+				}
+				&.active{
+					&:before{
+						background: none;
+					}
+					span{
+						color: #fff;
+					}
+				}
+				span{
+					position: relative;
+					z-index: 1;
+					color: #2a2a2a;
+					font-size: 20px;
+					transition: color .2s ease-in-out;
+				}
+			}
+
+			.v-tab--switch{
+				position: absolute;
+				width: 188px;
+				height: 62px;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				transition: transform 0.2s ease-in-out;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 100%;
+					background-image: linear-gradient(-46deg, #68e6f2 20%, #6bbdf6);
+					transform: rotate(-11deg) skewY(11deg);
+				}
+			}
+
+			.v-tab--arrow{
+				background: url(../img/venues-betting/bg/arrow-bg.png);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: calc(100% + 43px);
+				width: 318px;
+				height: 708px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+
+			&.v-tab-n0 .v-tab--switch{
+				transform: translate(62px,48px);
+			}
+			&.v-tab-n1 .v-tab--switch{
+				transform: translate(108px, 166px)
+			}
+			&.v-tab-n2 .v-tab--switch{
+				transform: translate(155px, 284px)
+			}
+			&.v-tab-n3 .v-tab--switch{
+				transform: translate(158px, 402px)
+			}
+			&.v-tab-n4 .v-tab--switch{
+				transform: translate(120px, 520px)
+			}
+		}
+
+		.v-tab-content {
+			display: inline-block;
+			width: calc(100% - 380px);
+			height: 100%;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+
+			.v-tab-content-item{
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 100%;
+				height: 100%;
+				// background: no-repeat center center/cover;
+				&:after{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					content: '';
+					background: no-repeat center center/cover;
+				}
+
+				.v-tab-content-inner{
+					position: relative;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+				}
+				.v-tab-frames-wrap{
+					position: relative;
+					width: 100%;
+					height: 100%;
+					.v-tab-frame , .v-tab-subframe,
+					.v-tab-frame2 , .v-tab-subframe2,
+					.v-tab-frame3 , .v-tab-subframe3
+					{
+						background: no-repeat center center/cover;
+						transition: opacity 0.2s ease, filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+						opacity: 0;
+						filter: blur(10px);
+						transform: translate(-50% , -50%) scale(0.98);
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 50%;
+						// left: 50%;
+						left: calc(50% - 100px);
+
+					}
+					.v-tab-subframe, .v-tab-subframe2, .v-tab-subframe3{
+						position: absolute;
+						top: 50%;
+						transform:translate(-50% , -50%) scale(0.94);
+						left: calc(50% - 100px);
+						
+
+					}
+				}
+
+				.v-tab-frames-button{
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					opacity: 0;
+					.v-tab-frames-button-switch{
+						width: 204px;
+						height: 121px;
+						background: no-repeat center center/cover;
+						transition: background-image .2s ease-in-out;
+						&:not(:last-child){
+							margin-bottom: 30px;
+						}
+						
+					}
+				}
+
+				//  ============================== V0 ===========================
+				&.v-tab-n0 {
+					&.active{
+						// background-image: url(../img/venues-betting/bg/white_bg/sports_bg.png);
+						&:after{
+							background-image: url(../img/venues-betting/bg/white_bg/sports_bg.png);
+							width: 820px;
+							height: 683px;
+							left: calc(50% + 50px);
+						} 
+						.v-tab-frames-button{
+							opacity: 1;
+						}
+					}
+					.v-tab-frame {
+						width: 633px;
+						height: 712px;
+						background-image: url(../img/venues-betting/bg/frame/sports.png);
+					}
+					.v-tab-frame2 {
+						height: 585px;
+						background-image: url(../img/venues-betting/venues-tab-n0-frame2@1.png);
+					}
+					.v-tab-frame3 {
+						width: 678px;
+						height: 587px;
+						background-image: url(../img/venues-betting/venues-tab-n0-frame3@1.png);
+					}
+
+					.v-tab-frames-button-switch{
+						&:nth-child(1){
+							background-image: url(../img/venues-betting/btn/bti.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/bti_on.png);
+							}
+						}
+						&:nth-child(2){
+							background-image: url(../img/venues-betting/btn/im-sports.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/im-sports_on.png);
+							}
+						}
+						&:nth-child(3){
+							background-image: url(../img/venues-betting/btn/sports.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/sports_on.png);
+							}
+						}
+					}
+
+
+				}
+				//  ============================== V1 ===========================
+				&.v-tab-n1 {
+					&.active{
+						&:after{
+							background-image: url(../img/venues-betting/bg/white_bg/live-casino_bg.png);
+							width: 820px;
+							height: 683px;
+							left: calc(50% + 100px);
+						} 
+						.v-tab-frames-button{
+							opacity: 1;
+						}
+					}
+					.v-tab-frame {
+						width: 868px;
+						height: 728px;
+						background-image: url(../img/venues-betting/venues-tab-n1-frame@1-compressed.png);
+					}
+					.v-tab-subframe{
+						width: 990px;
+						height: 710px;
+						background-image: url(../img/venues-betting/venues-tab-n1-subframe@1-compressed.png);
+					}
+
+					.v-tab-frame2 {
+						width: 734px;
+						height: 744px;
+						background-image: url(../img/venues-betting/venues-tab-n1-frame2@1-compressed.png);
+					}
+					.v-tab-subframe2{
+						width: 990px;
+						height: 710px;
+						background-image: url(../img/venues-betting/venues-tab-n1-subframe@1-compressed.png);
+					}
+
+					.v-tab-frames-button-switch{
+						&:nth-child(1){
+							background-image: url(../img/venues-betting/btn/ag.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/ag_on.png);
+							}
+						}
+						&:nth-child(2){
+							background-image: url(../img/venues-betting/btn/eb.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/eb_on.png);
+							}
+						}
+					}
+
+					
+				}
+				//  ============================== V2 ===========================
+				&.v-tab-n2 {
+					&.active{
+						&:after{
+							background-image: url(../img/venues-betting/bg/white_bg/esports_bg.png);
+							width: 820px;
+							height: 683px;
+							left: calc(50% + 100px);
+						} 
+						.v-tab-frames-button{
+							opacity: 1;
+						}
+					}
+					.v-tab-frame {
+						width: 442px;
+						height: 725px;
+						margin: 0 auto;
+						transform-origin: center bottom;
+						background-image: url(../img/venues-betting/venues-tab-n2-frame@1-compressed.png);
+					}
+					.v-tab-subframe{
+						width: 900px;
+						height: 582px;
+						background-image: url(../img/venues-betting/venues-tab-n2-subframe@1-compressed.png);
+						// left: calc(50% - 100px);
+					}
+					.v-tab-frames-button-switch{
+						&:nth-child(1){
+							background-image: url(../img/venues-betting/btn/im-esports.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/im-esports_on.png);
+							}
+						}
+					}
+
+				}
+				//  ============================== V3 ===========================
+				&.v-tab-n3 {
+					&.active{
+						&:after{
+							background-image: url(../img/venues-betting/bg/white_bg/slot_bg.png);
+							width: 820px;
+							height: 683px;
+							left: calc(50% + 100px);
+						} 
+						.v-tab-frames-button{
+							opacity: 1;
+						}
+					}
+					.v-tab-frame {
+						width: 819px;
+						height: 773px;
+						background-image: url(../img/venues-betting/venues-tab-n3-frame@1-compressed.png);
+					}
+					.v-tab-frame2{
+						width: 645px;
+						height: 681px;
+						background-image: url(../img/venues-betting/venues-tab-n3-frame2@1-compressed.png);
+					}
+					.v-tab-frame3{
+						width: 890px;
+						height: 724px;
+						background-image: url(../img/venues-betting/venues-tab-n3-frame3@1-compressed.png);
+					}
+					.v-tab-frames-button-switch{
+						&:nth-child(1){
+							background-image: url(../img/venues-betting/btn/cq.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/cq_on.png);
+							}
+						}
+						&:nth-child(2){
+							background-image: url(../img/venues-betting/btn/pt.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/pt_on.png);
+							}
+						}
+						&:nth-child(3){
+							background-image: url(../img/venues-betting/btn/mg.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/mg_on.png);
+							}
+						}
+					}
+
+				}
+				//  ============================== V4 ===========================
+
+				&.v-tab-n4 {
+					&.active{
+						&:after{
+							background-image: url(../img/venues-betting/bg/white_bg/poker_bg.png);
+							width: 820px;
+							height: 683px;
+							left: calc(50% + 100px);
+						} 
+						.v-tab-frames-button{
+							opacity: 1;
+						}
+					}
+					.v-tab-frame {
+						width: 777px;
+						height: 653px;
+						background-image: url(../img/venues-betting/poker.png);
+					}
+					.v-tab-subframe{
+						width: 896.87px;
+						height: 776.21px;
+						background-image: url(../img/venues-betting/poker_a.png);
+						left: calc(50% - 50px);
+
+					}
+					.v-tab-frames-button-switch{
+						&:nth-child(1){
+							background-image: url(../img/venues-betting/btn/ky.png);
+							&.switch-active{
+								background-image: url(../img/venues-betting/btn/ky_on.png);
+							}
+						}
+					}
+
+				}
+
+
+
+				&.active {
+					z-index: 100;
+					&.tab-state-n0{
+						.v-tab-frame , .v-tab-subframe{
+							opacity: 1;
+							filter: blur(0);
+							transform: translate(-50% , -50%) scale(1);
+						}
+						
+					}
+					&.tab-state-n1{
+						.v-tab-frame2 , .v-tab-subframe2{
+							opacity: 1;
+							filter: blur(0);
+							transform: translate(-50% , -50%) scale(1);
+						}
+					}
+					&.tab-state-n2{
+						.v-tab-frame3 , .v-tab-subframe3{
+							opacity: 1;
+							filter: blur(0);
+							transform: translate(-50% , -50%) scale(1);
+						}
+					}
+					
+				}
+
+				
+			}
+		}
+		
+	
+		// .tabs{
+		// 	display: block;
+		// 	box-shadow: none;
+		// }
+
+
+		// .tabs .tab--switch{
+		// 	background: none;
+		// 	box-shadow: none;
+		// 	&:before {
+		// 		content: '';
+		// 		position: absolute;
+		// 		top: 0;
+		// 		right: 0;
+		// 		left: 0;
+		// 		bottom: 0;
+		// 		width: 100%;
+		// 		height: 100%;
+		// 		background-image: linear-gradient(-46deg, #68e6f2, #6bbdf6);
+		// 		transform: rotate(-11deg) skewY(11deg);
+		// 	}
+		// }
+	}		
+
+	&-body {
+		margin: 35px 0 0;
+	}
+	.tabs {
+		position: relative;
+		z-index: 200;
+	}
+	.tabs-content {
+		position: relative;
+		&.tab-n0 {
+			height: 671px + 30px;
+		}
+		&.tab-n1 {
+			height: 671px + 30px;
+		}
+		&.tab-n2 {
+			height: 671px + 30px;
+		}
+		&.tab-n3 {
+			height: 773px + 30px;
+		}
+		&.tab-n4 {
+			height: 671px + 30px;
+		}
+		.tab-content {
+			opacity: 0;
+			pointer-events: none;
+			@include transition(opacity .2s ease);
+			@include position(absolute, $top: 0, $left: 0, $right: 0, $bottom: 0);
+			&.active {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+	.tab-content-inner {
+		position: relative;
+		width: 1440px;
+		margin: 0 auto;
+		.tab-buttons {
+			font-size: 0;
+			display: flex;
+			@include position(absolute, $z-index: 110, $left: 50%, $bottom: 30px);
+			@include transform(translateX(-50%));
+			button:not(:last-child) {
+				margin: 0 40px 0 0;
+			}
+		}
+	}
+	.tab-content.tab-n0 {
+		// background: no-repeat top -530px left -360px;
+		background: no-repeat top -480px left -360px;
+		padding: 50px 0 0;
+		margin: -50px 0 0;
+		&.tab-state-n0 {
+			background-image: url(../img/bgs/bg-red-compressed.png);
+		}
+		&.tab-state-n1 {
+			background-image: url(../img/bgs/bg-blue-compressed.png);
+		}
+		&.tab-state-n2 {
+			background-image: url(../img/bgs/bg-red-compressed.png);
+		}
+		.tab-frames-wrap {
+			height: 585px;
+			position: relative;
+		}
+		.tab-buttons {
+			bottom: 105px;
+		}
+		.tab-frame,
+		.tab-frame2,
+		.tab-frame3 {
+			width: 810px;
+			opacity: 0;
+			transform-origin: center bottom;
+			filter: blur(10px);
+			background: no-repeat center center/cover;
+			@include transform(scale(.98));
+			@include transition(opacity .2s ease, filter .2s ease-in-out, transform .2s ease-in-out);
+		}
+		.tab-frame {
+			height: 571px;
+			z-index: 30;
+			background-image: url(../img/venues-betting/venues-tab-n0-frame@1.png);
+			@include position(absolute, $top: 10px, $left: calc(50% - 780px / 2));
+		}
+		.tab-frame2 {
+			height: 585px;
+			z-index: 20;
+			background-image: url(../img/venues-betting/venues-tab-n0-frame2@1.png);
+			@include position(absolute, $top: 10px, $left: calc(50% - 810px / 2));
+		}
+		.tab-frame3 {
+			width: 678px;
+			height: 587px;
+			z-index: 20;
+			background-image: url(../img/venues-betting/venues-tab-n0-frame3@1.png);
+			@include position(absolute, $top: 10px, $left: calc(50% - 678px / 2));
+		}
+	}
+	.tab-content.tab-n1 {
+		// background: no-repeat top -530px left -360px;
+		background: no-repeat top -480px left -360px;
+		padding: 50px 0 0;
+		margin: -50px 0 0;
+		&.tab-state-n0 {
+			background-image: url(../img/bgs/bg-green-compressed.png);
+		}
+		&.tab-state-n1 {
+			background-image: url(../img/bgs/bg-blue-compressed.png);
+		}
+		.tab-frames-wrap {
+			height: 744px;
+			position: relative;
+		}
+		.tab-buttons {
+			bottom: 245px;
+			@include transform(translateX(-44%));
+		}
+		.tab-frame,
+		.tab-frame2,
+		.tab-subframe,
+		.tab-subframe2 {
+			opacity: 0;
+			filter: blur(10px);
+			background: no-repeat center center/cover;
+			@include transition(opacity .2s ease, filter .2s ease-in-out, transform .2s ease-in-out);
+		}
+		.tab-frame,
+		.tab-frame2 {
+			transform-origin: center bottom;
+			@include transform(scale(.98));
+		}
+		.tab-subframe,
+		.tab-subframe2 {
+			@include transform(scale(.94));
+		}
+		.tab-frame {
+			width: 868px;
+			height: 728px;
+			background-image: url(../img/venues-betting/venues-tab-n1-frame@1-compressed.png);
+			@include position(absolute, $z-index: 90, $top: -40px, $left: calc(50% - 868px / 2));
+		}
+		.tab-subframe {
+			width: 990px;
+			height: 710px;
+			background-image: url(../img/venues-betting/venues-tab-n1-subframe@1-compressed.png);
+			@include position(absolute, $z-index: 100, $top: 0, $left: 138px);
+		}
+		.tab-frame2 {
+			width: 734px;
+			height: 744px;
+			background-image: url(../img/venues-betting/venues-tab-n1-frame2@1-compressed.png);
+			@include position(absolute, $z-index: 80, $top: -85px, $left: calc(50% - 734px / 2));
+		}
+		.tab-subframe2 {
+			width: 966px;
+			height: 565px;
+			background-image: url(../img/venues-betting/venues-tab-n1-subframe2@1-compressed.png);
+			@include position(absolute, $z-index: 100, $top: 21px, $left: 238px);
+		}
+	}
+	.tab-content.tab-n2 {
+		// background: url(../img/bgs/bg-blue-compressed.png) no-repeat top -530px left -360px;
+		background: url(../img/bgs/bg-blue-compressed.png) no-repeat top -480px left -360px;
+		padding: 50px 0 0;
+		margin: -50px 0 0;
+		.tab-buttons {
+			bottom: 225px;
+			@include transform(translateX(-60%));
+		}
+		.tab-frame,
+		.tab-subframe {
+			filter: blur(10px);
+			background: no-repeat center center/cover;
+			@include transition(filter .2s ease-in-out, transform .2s ease-in-out);
+		}
+		.tab-frame {
+			width: 442px;
+			height: 725px;
+			margin: 0 auto;
+			transform-origin: center bottom;
+			background-image: url(../img/venues-betting/venues-tab-n2-frame@1-compressed.png);
+			@include position(relative, $z-index: 90);
+			@include transform(scale(.98));
+		}
+		.tab-subframe {
+			width: 900px;
+			height: 582px;
+			background-image: url(../img/venues-betting/venues-tab-n2-subframe@1-compressed.png);
+			@include position(absolute, $z-index: 100, $top: -60px, $left: 275px);
+			@include transform(scale(.94));
+		}
+	}
+	.tab-content.tab-n3 {
+		// background: no-repeat top -530px left -360px;
+		background: no-repeat top -480px left -360px;
+		padding: 50px 0 0;
+		margin: -50px 0 0;
+		&.tab-state-n0 {
+			background-image: url(../img/bgs/bg-green-compressed.png);
+		}
+		&.tab-state-n1 {
+			background-image: url(../img/bgs/bg-red-compressed.png);
+		}
+		&.tab-state-n2 {
+			background-image: url(../img/bgs/bg-blue-compressed.png);
+		}
+		.tab-buttons {
+			bottom: 282px;
+		}
+		.tab-frames-wrap {
+			height: 773px;
+			position: relative;
+		}
+		.tab-frame,
+		.tab-frame2,
+		.tab-frame3 {
+			filter: blur(10px);
+			opacity: 0;
+			transform-origin: center bottom;
+			background: no-repeat center center/cover;
+			@include transform(scale(.98));
+			@include transition(opacity .2s ease-in-out, filter .2s ease-in-out, transform .2s ease-in-out);
+		}
+		.tab-frame {
+			width: 819px;
+			height: 773px;
+			background-image: url(../img/venues-betting/venues-tab-n3-frame@1-compressed.png);
+			@include position(absolute, $z-index: 90, $top: 0, $left: calc(50% - 819px / 2));
+		}
+		.tab-frame2 {
+			width: 645px;
+			height: 681px;
+			background-image: url(../img/venues-betting/venues-tab-n3-frame2@1-compressed.png);
+			@include position(absolute, $z-index: 80, $top: 10px, $left: calc(50% - 645px / 2));
+		}
+		.tab-frame3 {
+			width: 890px;
+			height: 724px;
+			background-image: url(../img/venues-betting/venues-tab-n3-frame3@1-compressed.png);
+			@include position(absolute, $z-index: 70, $top: -80px, $left: calc(50% - 890px / 2));
+		}
+	}
+	.tab-content.tab-n4 {
+		// background: url(../img/bgs/bg-blue-compressed.png) no-repeat top -530px left -360px;
+		background: url(../img/bgs/bg-blue-compressed.png) no-repeat top -480px left -360px;
+		padding: 50px 0 0;
+		margin: -50px 0 0;
+		.tab-buttons {
+			bottom: 145px;
+			@include transform(translateX(-60%));
+		}
+		.tab-frame {
+			width: 777px;
+			height: 653px;
+			margin: 0 auto;
+			transform-origin: center bottom;
+			background: url(../img/venues-betting/venues-tab-n4-frame@1-compressed.png) no-repeat center center/cover;
+			filter: blur(10px);
+			@include position(relative, $z-index: 90);
+			@include transform(scale(.98));
+			@include transition(filter .2s ease-in-out, transform .2s ease-in-out);
+		}
+		.tab-subframe {
+			width: 896.87px;
+			height: 776.21px;
+			background: url(../img/venues-betting/venues-tab-n4-subframe@1-compressed.png) no-repeat center center/cover;
+			filter: blur(10px);
+			@include position(absolute, $z-index: 100, $top: -80px, $left: 255px);
+			@include transform(scale(.94));
+			@include transition(filter .2s ease-in-out, transform .2s ease-in-out);
+		}
+	}
+	.tabs-content.tab-n0 {
+		.tab-n0.tab-state-n0 .tab-frame {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+		.tab-n0.tab-state-n1 .tab-frame2 {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+		.tab-n0.tab-state-n2 .tab-frame3 {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+	}
+	.tabs-content.tab-n1 {
+		.tab-n1.tab-state-n0 .tab-frame {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+		.tab-n1.tab-state-n0 .tab-subframe {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+		.tab-n1.tab-state-n1 .tab-frame2 {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+		.tab-n1.tab-state-n1 .tab-subframe2 {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+	}
+	.tabs-content.tab-n2 {
+		.tab-n2 .tab-frame {
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+		.tab-n2 .tab-subframe {
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+	}
+	.tabs-content.tab-n3 {
+		.tab-n3.tab-state-n0 .tab-frame {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+		.tab-n3.tab-state-n1 .tab-frame2 {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+		.tab-n3.tab-state-n2 .tab-frame3 {
+			opacity: 1;
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+	}
+	.tabs-content.tab-n4 {
+		.tab-n4 .tab-frame {
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+		.tab-n4 .tab-subframe {
+			filter: blur(0);
+			@include transform(scale(1));
+		}
+	}
+	.bti-logo {
+		min-width: 98px;
+		height: 38px;
+		background: url(../img/venues-betting/logo/bti-logo.png) no-repeat center center/cover;
+	}
+	.sb-logo {
+		min-width: 120px;
+		height: 25px;
+		background: url(../img/venues-betting/logo/sb-logo.png) no-repeat center center/cover;
+	}
+	.ag-logo {
+		min-width: 116px;
+		height: 40px;
+		background: url(../img/venues-betting/logo/ag-logo.png) no-repeat center center/cover;
+	}
+	.ebet-logo {
+		min-width: 125px;
+		height: 39px;
+		background: url(../img/venues-betting/logo/ebet-logo.png) no-repeat center center/cover;
+	}
+	.es-logo {
+		min-width: 129px;
+		height: 28px;
+		background: url(../img/venues-betting/logo/es-logo.png) no-repeat center center/cover;
+	}
+	.co9-logo {
+		min-width: 111px;
+		height: 54px;
+		background: url(../img/venues-betting/logo/co9-logo.png) no-repeat center center/cover;
+	}
+	.pt-logo {
+		min-width: 125px;
+		height: 28px;
+		background: url(../img/venues-betting/logo/pt-logo.png) no-repeat center center/cover;
+	}
+	.mg-logo {
+		min-width: 129px;
+		height: 42px;
+		background: url(../img/venues-betting/logo/mg-logo.png) no-repeat center center/cover;
+	}
+	.ky-logo {
+		min-width: 130px;
+		height: 36px;
+		background: url(../img/venues-betting/logo/ky-logo.png) no-repeat center center/cover;
+	}
+	.沙巴体育-logo {
+		min-width: 95px;
+		height: 39px;
+		background: url(../img/venues-betting/logo/沙巴体育@2.png) no-repeat center center/cover;
+		margin: 0 0 0 10px;
+	}
+	button.switch {
+		position: relative;
+		@include radius(10px);
+		@include gradient2(to right, #c1ea4f 0%, #8bdc65 45%, #16885f 100%);
+		@include transition(box-shadow .2s ease);
+		.content {
+			width: 204px;
+			height: 90px;
+			position: relative;
+			z-index: 10;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 26px 20px;
+			svg {
+				min-width: 32px;
+				fill: #16885f;
+			}
+		}
+		&:after {
+			content: '';
+			background: #fff;
+			pointer-events: none;
+			transform-origin: center center;
+			@include radius(10px);
+			@include position(absolute, $z-index: 5, $top: 0, $left: 0, $right: 0, $bottom: 0);
+			@include transform(scale(1));
+			@include transition(border-radius .2s ease, transform .2s ease);
+		}
+		&.active {
+			@include shadow(0 4px 16px rgba(42, 51, 84, .12));
+			&:after {
+				@include radius(7px);
+				@include transform(scale(.97, .94));
+			}
+		}
+	}
+}

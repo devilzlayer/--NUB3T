@@ -1,0 +1,76 @@
+.profile-joinus-desktop {
+  .joinus-wrap-body {
+    padding: 60px 22px 40px;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    .joinus-body-text {
+      text-align: center;
+      color: #39404d;
+      font-size: 13px;
+    }
+
+    .joinus-body-text p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .joinus-details-list {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 27px;
+    .joinus-details-item {
+      margin-bottom: 13px;
+      i {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        &.qq-code {
+          background: url(../../../pwa/assets/img/joinus/qq.svg) no-repeat
+            center center/contain;
+        }
+        &.we-chat {
+          background: url(../../../pwa/assets/img/joinus/wechat.svg) no-repeat
+            center center/contain;
+        }
+      }
+      span {
+        position: relative;
+        top: -8px;
+        font-size: 13px;
+        color: #39404d;
+      }
+    }
+  }
+
+  .joinus-qr-code {
+    text-align: center;
+  }
+
+  .joinus-qr-code img {
+    width: 144px;
+    height: 144px;
+  }
+
+  .joinus-action {
+    text-align: center;
+    margin-top: 37px;
+  }
+
+  .joinus-action button {
+    font-size: 13px;
+    color: #fff;
+    background: linear-gradient(90deg, #fd644f, #f28e26);
+    border-radius: 5px;
+    width: 189px;
+    height: 41px;
+    position: relative;
+    outline: none;
+  }
+  .joinus-action-caption {
+    font-size: 13px;
+    color: #39404d;
+    margin-bottom: 10px;
+  }
+}

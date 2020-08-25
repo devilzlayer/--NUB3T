@@ -1,0 +1,198 @@
+@import "../../../assets/scss/mixin";
+
+.withdrawal-history-wrap {
+  .withdrawal-history-wrap-inner {
+    padding-bottom: 100px;
+  }
+
+  .withdrawal-history-card-head {
+    background-image: linear-gradient(#c3cfe2, #f5f7fa);
+    padding: 10px 19px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    .withdrawal-history-card-title {
+      color: #4796ff;
+      font-size: 14px;
+      span {
+        border: 1px solid #4796ff;
+        width: 103px;
+        display: block;
+        text-align: center;
+        border-radius: 13px;
+        padding: 2px;
+      }
+      i {
+        background: url(../img/refresh.svg) no-repeat center center/contain;
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        position: absolute;
+        right: 19px;
+        top: 50%;
+        transform: translateY(-50%);
+        &.reload {
+          -webkit-animation: rotation 2s infinite linear;
+        }
+      }
+      @keyframes rotation {
+        from {
+          transform: translateY(-50%) rotate(0deg);
+        }
+        to {
+          transform: translateY(-50%) rotate(359deg);
+        }
+      }
+    }
+  }
+  .withdrawal-history-card-body {
+    .no-transactions {
+      height: 416px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #95969a;
+      padding-top: 66px;
+      .image-box {
+        background: url("../img/profile/svg/open-box.svg") no-repeat center
+          center/contain;
+        width: 158px;
+        height: 137px;
+        display: inline-block;
+        margin-bottom: 23px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+    .withdrawal-history-card-item {
+      padding: 19px 20px;
+      border-bottom: 1px solid #f1efef;
+      border-left: 1px solid #f1efef;
+      border-right: 1px solid #f1efef;
+      background: #fff;
+      .cl-item {
+        display: inline-block;
+        width: 50%;
+        font-size: 12px;
+        @media screen and (max-width: 375px) {
+          width: 35%;
+        }
+        &.withdrawal-history-card-text {
+          text-align: left;
+          color: #95969a;
+          &.cancel {
+            width: 43%;
+          }
+        }
+        &.withdrawal-history-card-value {
+          float: right;
+          width: auto;
+          min-width: 55px;
+          text-align: left;
+          position: relative;
+          .cancel {
+            font-size: 11px;
+            color: #aeb0b4;
+            position: absolute;
+            left: calc(-100% - 10px);
+            top: 50%;
+            transform: translateY(-50%);
+            border: 1px solid #c0c0c0;
+            padding: 4px 13px;
+            border-radius: 5px;
+            @media screen and (max-width: 375px) {
+              left: calc(-100% - 1px);
+              padding: 4px 8px;
+            }
+          }
+
+          p {
+            &.cl-card-amount {
+              color: #ff934c;
+              span {
+                color: #fc686f;
+              }
+            }
+            &.cl-card-status {
+              span {
+                position: relative;
+              }
+              &.success {
+                color: #5bb374;
+              }
+              &.failure {
+                color: #f15151;
+              }
+              &.unreviewed {
+                color: #ffcc00;
+              }
+              &.withdrawing {
+                color: #5ccbef;
+              }
+              &.remittance {
+                color: #5ccbef;
+              }
+              
+            }
+          }
+          .fail {
+            display: inline-block;
+            position: relative;
+            top: 3px;
+            left: 5px;
+            span {
+              position: absolute !important;
+              display: block;
+              background: rgba(66, 66, 66, 0.72);
+              color: #fff;
+              width: 114px;
+              padding: 8px 0;
+              text-align: center;
+              border-radius: 10px;
+              right: 100%;
+              bottom: 100%;
+              &:after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 15px solid rgba(66, 66, 66, 0.72);
+                position: absolute;
+                top: calc(100% - 5px);
+                right: -5px;
+                transform: rotate(-34deg);
+              }
+            }
+            i {
+              background: url(../img/request-failed.svg) no-repeat center
+                center/contain;
+              width: 13px;
+              height: 13px;
+              display: block;
+              filter: opacity(0.5);
+            }
+          }
+        }
+      }
+      // .withdrawal-history-card-text , .withdrawal-history-card-value {
+      // 	font-size: 14px;
+      // }
+      // .withdrawal-history-card-button button {
+      // 	width: 89px;
+      // 	height: 29px;
+      // 	border-radius: 5px;
+      // 	background: #e8e9eb;
+      // 	font-size: 14px;
+      // 	color: #cdd0d5;
+      // }
+      // &.active .withdrawal-history-card-button button {
+      // 	color: #fff;
+      // 	background-image: linear-gradient(-46deg, #04a0f9,#08b1f9);
+
+      // }
+    }
+  }
+}

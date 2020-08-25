@@ -1,0 +1,142 @@
+@import '_mixin';
+
+$wrap-width: 65%;
+$side-padding: 20px;
+
+.promotions {
+	position: relative;
+	.promotions-flex-wrap {
+		display: flex;
+		justify-content: center;
+	}
+	&-inner {
+		width: 1200px;
+		padding: $side-padding;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&-buttons {
+		// padding: 0 115px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		margin: auto;
+		margin-bottom: 70px;
+		position: relative;
+		width: 930px;
+		.button {
+			cursor: pointer;
+			@include radius(19px);
+			width: 120px;
+			height:38px;
+			text-align: center;
+			background: linear-gradient(#ecedea 0%, #f8f8f6 40%, #ecedea 100%);
+			@include shadow(-1px 1px 5.52px 2.48px rgba(0, 0, 0, 0.02));
+			color: #919396;
+			line-height: 38px;
+			z-index: 1;
+		}
+		.switch{
+			background: linear-gradient(-46deg, #04a0f9, #08b1f9);
+			position: absolute;
+			width: 120px;
+			height: 38px;
+			border-radius: 19px;
+			transition: all .2s ease-in-out;
+			left: 0;
+			// &.active-1{
+			// 	left: 162px;
+			// }
+		}
+		.active {
+			background: none;
+			color: #fff
+		}
+
+	}
+	&-banners {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+	}
+	&.single {
+		.promotions-inner {
+			width: 1100px;
+			padding: $side-padding;
+		}
+	}
+	.banner {
+		width: 49%;
+		overflow: hidden;
+		@include shadow(-1px 1px 5.52px 2.48px rgba(0, 0, 0, 0.02));
+		&:not(:last-child) {
+			margin-bottom:20px;
+		}
+		&-inner {
+			background-color: #f7f7f7;
+			@include radius(10px);
+		}
+		.banner-img {
+			img {
+				@include shadow(-1px 1px 5.52px 2.48px rgba(0, 0, 0, 0.02));
+				border: 3px solid #fff;
+				height: 193px;
+				@include radius(10px);
+				width: 100%;
+				display: block;
+			}
+		}
+		.banner-body {
+			height: 35px;
+			padding: 0 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			p {
+				flex: 1;
+				color: #665;
+				@include font(14px, 400);
+			}
+			.arrow {
+				float: right;
+				color: #46aef7;
+				font-size: 13px;
+				padding-right: 17px;
+				position: relative;
+				&:after {
+				  background: url(../../pwa/assets/img/promotions/go-next.svg) no-repeat center
+					center/cover;
+				  content: "";
+				  position: absolute;
+				  right: 0;
+				  top: 50%;
+				  width: 12px;
+				  height: 11px;
+				  transform: translateY(-50%);
+				}
+			  }
+			button {
+				outline: none;
+				color: #46aef7;
+				padding: 10px 40px;
+				@include font(14px, 500);
+				
+			}
+		}
+	}
+	.banner-info {
+		background-color: #f7f7f7;
+		@include radius(10px);
+		width: 100%;
+		@include shadow(-1px 1px 6.56px 1.44px rgba(0, 0, 0, 0.05));
+		p {
+			padding: 20px;
+			color: #665;
+			@include font(14px, 400);
+		}
+	}
+}

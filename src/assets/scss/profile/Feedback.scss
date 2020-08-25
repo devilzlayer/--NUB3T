@@ -1,0 +1,36 @@
+.profile-feedback-desktop{
+    .profile-feedback-wrap {
+        min-height: 502px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .profile-feedback-text {
+            text-align: center;
+            color: #39404d;
+            font-size: 14px;
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        .feedback-action {
+            text-align: center;
+            margin-top: 35px;
+
+            .feedback-action-caption {
+                margin-bottom: 10px;
+            }
+            button {
+                font-size: 13px;
+                color: #fff;
+                background: linear-gradient(90deg, #fd644f, #f28e26);
+                border-radius: 5px;
+                width: 189px;
+                height: 41px;
+                position: relative;
+                outline: none;
+            }
+        }
+    }
+}

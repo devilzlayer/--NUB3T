@@ -1,0 +1,24 @@
+@import "../../../../assets/scss/mixin";
+
+.qr {
+  text-align: center;
+  h1 {
+    @include font(14px, 500, 1.4);
+  }
+  .qr-wrap {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 30px auto 25px;
+    height: 210px;
+    width: 210px;
+    @include radius(10px);
+    @include shadow(0 4px 14px rgba(#2a3354, 0.12));
+    .load-spin {
+      @include radius(10px);
+    }
+  }
+  p {
+    color: #55687d;
+    @include font(14px, 500, 1.4);
+  }
+}

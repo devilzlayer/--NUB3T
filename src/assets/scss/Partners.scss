@@ -1,0 +1,283 @@
+@import '_mixin';
+
+$wrap-width: 1200px;
+$side-padding: 40px;
+
+.partners {
+	background: #fff;
+	overflow: hidden;
+	@include shadow(0 -4px 16px rgba(42, 51, 84, .12));
+	&-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: $wrap-width;
+		margin: 0 auto;
+		padding: 32px $side-padding;
+	}
+	.partner--item {
+		position: relative;
+		span{
+			display: block;
+			background: no-repeat center center/cover;
+			transition: all .2s ease-in-out;
+		}
+		&.n1 {
+			span{
+				width: 88px;
+				height: 19px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n1.png); 
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n1_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+
+		&.n2 {
+			span{
+				width: 84px;
+				height: 18px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n2.png);
+
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n2_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+
+		&.n3 {
+			span{
+				width: 80px;
+				height: 31px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n3.png);
+
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n3_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+		
+		&.n4 {
+			span{
+				width: 84px;
+				height: 19px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n4.png);
+
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n4_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+
+		&.n5 {
+			span{
+				width: 75px;
+				height: 25px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n5.png);
+
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n5_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+		&.n6 {
+			span{
+				width: 81px;
+				height: 27px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n6.png);
+
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n6_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+
+		&.n7 {
+			span{
+				width: 76px;
+				height: 25px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n7.png);
+
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n7_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+		&.n8 {
+			span{
+				width: 72px;
+				height: 23px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n8.png);
+
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n8_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+
+		&.n9 {
+			span{
+				width: 60px;
+				height: 29px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n9.png);
+
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n9_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+
+		&.n10 {
+			span{
+				width: 98px;
+				height: 27px;
+				&:nth-child(1){
+					background-image: url(../img/partners/new/partner-n10.png);
+
+				}
+				&:nth-child(2){
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					background-image: url(../img/partners/new/partner-n10_on.png); 
+				}
+			}
+			&:hover{
+				span{
+					&:nth-child(2){
+						opacity:1;
+					}
+				}
+				
+			}
+		}
+
+	}
+}

@@ -1,0 +1,270 @@
+
+.profile-about-desktop{
+    .profile-section {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .about-wrap-inner {
+        padding: 96px 30 165px
+    }
+    .about-logo {
+        text-align: center;
+        .logo {
+            margin: 0 auto 10px;
+            // background: url(../../../assets/img/png/icon512.png) no-repeat center center/cover;
+            background: url(../../../pwa/assets/img/about/logo-about.svg) no-repeat center center/cover;
+            width: 84px;
+            height: 84px;
+            border-radius: 10px;
+            // @include size(64px, 64px);
+            // @include radius(10px);
+            // @include shadow(0 8px 24px rgba(#000, .1));
+        }
+        .divider {
+            text-align: center;
+            position: relative;
+            color: #04a0f9;
+            font-size: 22px;
+            margin-bottom: 25px;
+            background: linear-gradient(-47deg, #46aef7, #1dd5e6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            width: 135px;
+            &:before {
+              position: absolute;
+              content: "";
+              background: linear-gradient(
+                -90deg,
+                #aacdef,
+                #69aae8,
+                rgba(255, 255, 255, 0)
+              );
+              width: 150px;
+              height: 1px;
+              top: 50%;
+              left: -100%;
+            }
+            &:after {
+              position: absolute;
+              content: "";
+              background: linear-gradient(
+                90deg,
+                #aacdef,
+                #69aae8,
+                rgba(255, 255, 255, 0)
+              );
+              width: 150px;
+              height: 1px;
+              top: 50%;
+              right: -100%;
+            }
+        }
+    }
+    
+    
+      .about-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+        // background: #fff;
+        padding: 41px 22px;
+        // box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 50px;
+        position: relative;
+        z-index: 2;
+      }
+      h1 {
+        text-align: center;
+        margin: 0 0 22px;
+        color: #1e1e1e;
+        font-size: 22px ;
+        font-weight: 400;
+      }
+      p {
+        margin: 0 0 22px;
+        color: #646464;
+        font-size: 13px;
+        font-weight: normal;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      .about-licenses {
+        // margin: 40px 0 0;
+        margin-left: -20px;
+        margin-right: -20px;
+        .about-fca-logo-wrap {
+          position: relative;
+          padding-top: 48px;
+        //   padding-bottom: 46px;
+        //   &:before {
+        //     position: absolute;
+        //     content: "";
+        //     background: url(../../../pwa/assets/img/about/about-us_bg.png);
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+        //     background-position: bottom center;
+        //     width: 100%;
+        //     min-height: 100vh;
+        //     bottom: 0;
+        //     left: 0;
+        //   }
+          .about-fca-logo-wrap-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 45px;
+            text-align: center;
+            h2 {
+              position: relative;
+              text-align: center;
+              color: #000;
+              font-size: 22px;
+              font-weight: normal;
+              display: inline-block;
+              &:before {
+                position: absolute;
+                content: "";
+                background: linear-gradient(-90deg, #000, rgba(255, 255, 255, 0));
+                width: 100px;
+                height: 1px;
+                top: 50%;
+                left: -100%;
+              }
+              &:after {
+                position: absolute;
+                content: "";
+                background: linear-gradient(90deg, #000, rgba(255, 255, 255, 0));
+                width: 100px;
+                height: 1px;
+                top: 50%;
+                right: -100%;
+              }
+              @media screen and (max-width: 420px) {
+                &::before,
+                &:after {
+                  width: 85px;
+                }
+              }
+              @media screen and (max-width: 375px) {
+                &::before,
+                &:after {
+                  width: calc((100vw - 240px) / 2);
+                }
+              }
+            }
+          }
+        }
+        .licenses-grid-wrap {
+          padding-left: 30px;
+          padding-right: 30px;
+          h2 {
+                position: relative;
+                text-align: center;
+                color: #000;
+                font-size: 22px;
+                font-weight: normal;
+                width: 100%;
+                margin-top: 55px;
+                margin-bottom: 72px;
+                span{
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        background: linear-gradient(-90deg, #000, rgba(255, 255, 255, 0));
+                        width: 100px;
+                        height: 1px;
+                        top: 50%;
+                        left: -100%;
+                    }
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        background: linear-gradient(90deg, #000, rgba(255, 255, 255, 0));
+                        width: 100px;
+                        height: 1px;
+                        top: 50%;
+                        right: -100%;
+                    }
+                }
+                
+                
+            }
+        }
+      }
+      h3 {
+        // color: #888888;
+        text-align: center;
+        // @include font(16px, 500);
+        color: #000;
+        font-size: 13px;
+        font-weight: normal;
+        margin: auto;
+      }
+      .fca-logo {
+        background: url(../../../assets/img/about/logo.fca.svg) no-repeat center
+          center/cover;
+        margin: 17px auto 24px;
+        // @include size(86px, 118px);
+        width: 61px;
+        height: 80px;
+      }
+      .licenses-grid {
+        display: flex;
+        flex-wrap: wrap;
+        // margin: 30px auto 60px;
+        margin: 0px auto 60px;
+        .lg--item-wrap{
+            max-width: 25%;
+            flex: 0 0 25%;
+        }
+        .name {
+          color: #888888;
+          font-size: 16px;
+          font-weight: 400;
+          text-align: center;
+        }
+        .lg--item {
+          width: 100%;
+          text-align: center;
+          margin: 0 0 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 62px;
+          
+          .icon {
+            // margin: 0 auto 12px;
+            background: no-repeat center center/cover;
+          }
+          &.gc {
+            .icon {
+              background-image: url(../../../assets/img/about/logo.gc.svg);
+              width: 110px;
+              height: 29px;
+            }
+          }
+          &.mga {
+            .icon {
+              background-image: url(../../../assets/img/about/logo.mga.png);
+              width: 162px;
+              height: 30px;
+            }
+          }
+          &.pc {
+            .icon {
+              background-image: url(../../../assets/img/about/logo.pg.svg);
+              width: 62px;
+              height: 62px;
+            }
+          }
+          &.gc2 {
+            .icon {
+              background-image: url(../../../assets/img/about/logo.gc.png);
+              width: 133px;
+              height: 43px;
+            }
+          }
+        }
+    }
+}

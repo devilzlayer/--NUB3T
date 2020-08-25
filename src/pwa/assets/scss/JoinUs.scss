@@ -1,0 +1,109 @@
+@import "../../../assets/scss/mixin";
+
+.joinus-wrap {
+  .joinus-wrap-inner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    .joinus-wrap-inner-content {
+      height: 100%;
+    }
+    .joinus-wrap-inner-content {
+      .joinus-logo {
+        .logo {
+          background: linear-gradient(-90deg, #1dd5e6, #46aef7);
+          background-clip: text;
+          -webkit-background-clip: text;
+          background: url(../img/joinus/join-us.svg);
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 59px;
+          height: 67px;
+          margin: 0 auto 25px;
+        }
+      }
+      .joinus-wrap-body {
+        // margin-left: -30px;
+        // margin-right: -30px;
+        background: #fff;
+        padding: 41px 22px;
+        box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2);
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        .joinus-body-text {
+          text-align: center;
+          color: #39404d;
+          font-size: 13px;
+        }
+
+        .joinus-body-text p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .joinus-details-list {
+      text-align: center;
+      margin-top: 32px;
+      margin-bottom: 27px;
+      .joinus-details-item {
+        margin-bottom: 13px;
+        i {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+          &.qq-code {
+            background: url(../img/joinus/qq.svg) no-repeat center
+              center/contain;
+          }
+          &.we-chat {
+            background: url(../img/joinus/wechat.svg) no-repeat center
+              center/contain;
+          }
+        }
+        span {
+          position: relative;
+          top: -8px;
+          font-size: 13px;
+          color: #39404d;
+        }
+      }
+    }
+
+    .joinus-qr-code {
+      text-align: center;
+    }
+
+    .joinus-qr-code img {
+      width: 144px;
+      height: 144px;
+    }
+
+    .joinus-action {
+      text-align: center;
+      margin-top: 37px;
+    }
+
+    .joinus-action button {
+      font-size: 13px;
+      color: #fff;
+      background: linear-gradient(90deg, #fd644f, #f28e26);
+      border-radius: 5px;
+      width: 189px;
+      height: 41px;
+      position: relative;
+      outline: none;
+    }
+    .joinus-action-caption {
+      font-size: 13px;
+      color: #39404d;
+      margin-bottom: 10px;
+    }
+  }
+}

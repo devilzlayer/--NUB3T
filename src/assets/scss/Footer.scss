@@ -1,0 +1,140 @@
+@import '_mixin';
+@import '_variables';
+
+$wrap-width: 1200px;
+$side-padding: 0px;
+
+.footer {
+	color: #fff;
+	overflow: hidden;
+	background: #212533;
+	&-inner {
+		width: $wrap-width + ($side-padding * 2);
+		margin: 0 auto;
+		padding: 50px $side-padding 30px $side-padding;
+	}
+	&-content {
+		display: flex;
+		align-items: flex-start;
+		font: normal 12px/1.7 Roboto;
+		color: #7e8795;
+		.fca-logo {
+			margin: 0 60px 0 20px;
+			width: 97px;
+			height: 127px;
+			background: url(../img/png/logo/fca-logo.png) no-repeat center center/cover;
+		}
+		.fsc-logo {
+			width: 36px;
+			height: 36px;
+			margin: 0 0 35px;
+			background: url(../img/png/logo/fsc.png) no-repeat center center/cover;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: all .2s ease-in-out;
+				background: url(../img/png/logo/fsc_on.png) no-repeat center center/contain;
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+		.mga-logo {
+			width: 178px;
+			height: 35px;
+			margin: 0 0 45px;
+			background: url(../img/png/logo/mga.png) no-repeat center center/cover;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: all .2s ease-in-out;
+				background: url(../img/png/logo/mga_on.png) no-repeat center center/contain;
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+		.pacgor-logo {
+			width: 35px;
+			height: 35px;
+			background: url(../img/png/logo/pagcor.png) no-repeat center center/cover;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: all .2s ease-in-out;
+				background: url(../img/png/logo/pagcor_on.png) no-repeat center center/contain;
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+		.footer-content--row {
+			margin: 0 65px 0 0;
+			line-height: 24px;
+			&.text-center{
+				text-align: center;
+				line-height: normal;
+			}
+			&:last-child {
+				margin: 0;
+			}
+			a {
+				display: block;
+				margin: 0 0 30px;
+				white-space: nowrap;
+				&:last-child {
+					margin: 0;
+					
+				}
+			}
+			p {
+				// min-width: 210px;
+				margin: 0 0 40px;
+				&:last-child {
+					margin: 0;
+				}
+			}
+			&.links {
+				min-width: 130px;
+				margin: 0 40px 0 0;
+				& + div {
+					margin-right: 80px;
+					line-height: 24px;
+					// min-width: 230px;
+				}
+			}
+		}
+	}
+	&-copy {
+		margin: 38px 0 0;
+		text-align: center;
+		p {
+			font: normal 12px/1.3 Montserrat;
+			color: #7e8795;
+		}
+	}
+}

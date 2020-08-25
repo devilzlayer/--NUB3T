@@ -1,0 +1,124 @@
+@import "../../../assets/scss/mixin";
+
+.deposity-history-wrap {
+  .deposity-history-wrap-inner {
+    padding-bottom: 100px;
+  }
+
+  .deposity-history-card-head {
+    background-image: linear-gradient(#c3cfe2, #f5f7fa);
+    padding: 10px 19px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    .deposity-history-card-title {
+      color: #4796ff;
+      font-size: 14px;
+      span {
+        border: 1px solid #4796ff;
+        width: 103px;
+        display: block;
+        text-align: center;
+        border-radius: 13px;
+        padding: 2px;
+      }
+      i {
+        background: url(../img/refresh.svg) no-repeat center center/contain;
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        position: absolute;
+        right: 19px;
+        top: 50%;
+        transform: translateY(-50%);
+        &.reload {
+          -webkit-animation: rotation 2s infinite linear;
+        }
+      }
+      @keyframes rotation {
+        from {
+          transform: translateY(-50%) rotate(0deg);
+        }
+        to {
+          transform: translateY(-50%) rotate(359deg);
+        }
+      }
+    }
+  }
+  .deposity-history-card-body {
+    .no-transactions {
+      height: 416px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #95969a;
+      padding-top: 66px;
+      .image-box {
+        background: url("../img/profile/svg/open-box.svg") no-repeat center
+          center/contain;
+        width: 158px;
+        height: 137px;
+        display: inline-block;
+        margin-bottom: 23px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+    .deposity-history-card-item {
+      padding: 19px 33px;
+      border-bottom: 1px solid #f1efef;
+      border-left: 1px solid #f1efef;
+      border-right: 1px solid #f1efef;
+      background: #fff;
+      .cl-item {
+        display: inline-block;
+        width: 50%;
+        font-size: 12px;
+        &.deposity-history-card-text {
+          text-align: left;
+          color: #95969a;
+        }
+        &.deposity-history-card-value {
+          float: right;
+          width: auto;
+          min-width: 55px;
+          text-align: left;
+          p {
+            &.cl-card-amount {
+              color: #ff934c;
+              span {
+                color: #fc686f;
+              }
+            }
+            &.cl-card-status {
+              &.success {
+                color: #5bb374;
+              }
+              &.failure {
+                color: #f15151;
+              }
+            }
+          }
+        }
+      }
+      // .deposity-history-card-text , .deposity-history-card-value {
+      // 	font-size: 14px;
+      // }
+      // .deposity-history-card-button button {
+      // 	width: 89px;
+      // 	height: 29px;
+      // 	border-radius: 5px;
+      // 	background: #e8e9eb;
+      // 	font-size: 14px;
+      // 	color: #cdd0d5;
+      // }
+      // &.active .deposity-history-card-button button {
+      // 	color: #fff;
+      // 	background-image: linear-gradient(-46deg, #04a0f9,#08b1f9);
+
+      // }
+    }
+  }
+}

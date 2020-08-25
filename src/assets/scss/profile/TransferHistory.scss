@@ -1,0 +1,411 @@
+.profile-transfer-history{
+    .profile-desktop-tab{
+        box-shadow: 0px 1px 5.52px 2.48px rgba(0, 0, 0, 0.02);
+        .profile-desktop-tab-header{
+            background-image: linear-gradient(#c3cfe2, #f5f7fa);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12.5px 24px;
+            .profile-desktop-tab-header-nav {
+              display: flex;
+            }
+            .profile-desktop-tab-header-action {
+              display: flex;
+              align-items: center;
+              position: relative;
+              padding-right: 47px;
+              span {
+                border: 1px solid #4796ff;
+                width: 103px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 13px;
+                padding: 2px;
+                font-size: 14px;
+                color: #4796ff;
+              }
+              i{
+                background: url(../../../pwa/assets/img/refresh.svg) no-repeat center center/contain;
+                width: 21px;
+                height: 21px;
+                display: inline-block;
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+                &.reload {
+                    -webkit-animation: rotation 2s infinite linear;
+                }
+              }
+            }
+            .profile-desktop-tab-head-item {
+                margin-right: 80px;
+                &:last-child{
+                    margin: 0;
+                }
+                span {
+                    color: #4796ff;
+                    font-size: 14px;
+                    cursor: pointer;
+                    &.active{
+                        color: #fc686f;
+                        background: linear-gradient(-46deg, #ff934c, #fc686f);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+        .profile-desktop-tab-body {
+            min-height: 870px;
+            max-height: 870px;
+            background: #fff;
+            position: relative;
+            
+            .profile-desktop-tab-col {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                z-index: 1;
+                transition: all .2s ease-in-out;
+                overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 7px;
+                }
+                &::-webkit-scrollbar-track {
+                    border-radius: 3.5px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: #edeaea;
+                    border-radius: 3.5px;
+                }
+                &.active{
+                    opacity: 1;
+                    z-index: 2;
+                }
+                
+
+            }
+
+        }
+    }
+
+    .deposit-history-card-body{
+        .deposity-history-card-item {
+            padding: 19px 33px;
+            border-bottom: 1px solid #f1efef;
+            border-left: 1px solid #f1efef;
+            border-right: 1px solid #f1efef;
+            background: #fff;
+            .cl-item {
+                display: inline-block;
+                width: 50%;
+                font-size: 12px;
+                &.deposity-history-card-text {
+                text-align: left;
+                color: #95969a;
+                }
+                &.deposity-history-card-value {
+                float: right;
+                width: auto;
+                min-width: 55px;
+                text-align: left;
+                p {
+                    &.cl-card-amount {
+                    color: #ff934c;
+                    span {
+                        color: #fc686f;
+                    }
+                    }
+                    &.cl-card-status {
+                    &.success {
+                        color: #5bb374;
+                    }
+                    &.failure {
+                        color: #f15151;
+                    }
+                    }
+                }
+                }
+            }
+ 
+        }
+    }
+    .withdrawal-history-card-body{
+        .withdrawal-history-card-item {
+            padding: 19px 20px;
+            border-bottom: 1px solid #f1efef;
+            border-left: 1px solid #f1efef;
+            border-right: 1px solid #f1efef;
+            background: #fff;
+            .cl-item {
+              display: inline-block;
+              width: 50%;
+              font-size: 12px;
+              @media screen and (max-width: 375px) {
+                width: 35%;
+              }
+              &.withdrawal-history-card-text {
+                text-align: left;
+                color: #95969a;
+                &.cancel {
+                  width: 43%;
+                }
+              }
+              &.withdrawal-history-card-value {
+                float: right;
+                width: auto;
+                min-width: 55px;
+                text-align: left;
+                position: relative;
+                .cancel {
+                  font-size: 11px;
+                  color: #aeb0b4;
+                  position: absolute;
+                  left: calc(-100% - 10px);
+                  top: 50%;
+                  transform: translateY(-50%);
+                  border: 1px solid #c0c0c0;
+                  padding: 4px 13px;
+                  border-radius: 5px;
+                  @media screen and (max-width: 375px) {
+                    left: calc(-100% - 1px);
+                    padding: 4px 8px;
+                  }
+                }
+      
+                p {
+                  &.cl-card-amount {
+                    color: #ff934c;
+                    span {
+                      color: #fc686f;
+                    }
+                  }
+                  &.cl-card-status {
+                    span {
+                      position: relative;
+                    }
+                    &.success {
+                      color: #5bb374;
+                    }
+                    &.failure {
+                      color: #f15151;
+                    }
+                    &.unreviewed {
+                      color: #ffcc00;
+                    }
+                    &.withdrawing {
+                      color: #5ccbef;
+                    }
+                    &.remittance {
+                      color: #5ccbef;
+                    }
+                    
+                  }
+                }
+                .fail {
+                  display: inline-block;
+                  position: relative;
+                  top: 3px;
+                  left: 5px;
+                  span {
+                    position: absolute !important;
+                    display: block;
+                    background: rgba(66, 66, 66, 0.72);
+                    color: #fff;
+                    width: 114px;
+                    padding: 8px 0;
+                    text-align: center;
+                    border-radius: 10px;
+                    right: 100%;
+                    bottom: 100%;
+                    &:after {
+                      content: "";
+                      width: 0;
+                      height: 0;
+                      border-left: 7px solid transparent;
+                      border-right: 7px solid transparent;
+                      border-top: 15px solid rgba(66, 66, 66, 0.72);
+                      position: absolute;
+                      top: calc(100% - 5px);
+                      right: -5px;
+                      transform: rotate(-34deg);
+                    }
+                  }
+                  i {
+                    background: url(../../../pwa/assets/img/request-failed.svg) no-repeat center
+                      center/contain;
+                    width: 13px;
+                    height: 13px;
+                    display: block;
+                    filter: opacity(0.5);
+                  }
+                }
+              }
+            }
+
+        }
+    }
+    .transfer-history-card-body{
+        .transfer-record-card-item {
+            padding: 19px 33px;
+            border-bottom: 1px solid #f1efef;
+            border-left: 1px solid #f1efef;
+            border-right: 1px solid #f1efef;
+            background: #fff;
+            .cl-item {
+              display: inline-block;
+              width: 50%;
+              font-size: 12px;
+              &.transfer-record-card-text {
+                text-align: left;
+                color: #95969a;
+                span:last-child {
+                  margin-left: 25px;
+                  position: relative;
+                  &:before {
+                    background: url(../../../pwa/assets/img/transfer-record/wallet-transfer-arrow.svg)
+                      no-repeat center center/contain;
+                    width: 10px;
+                    height: 10px;
+                    content: "";
+                    position: absolute;
+                    left: -16px;
+                    top: 3px;
+                  }
+                }
+              }
+              &.transfer-record-card-value {
+                float: right;
+                min-width: 75px;
+                width: auto;
+                text-align: left;
+                p {
+                  &.cl-card-amount {
+                    color: #ff934c;
+                    span {
+                      color: #fc686f;
+                    }
+                  }
+                  &.cl-card-status {
+                    &.success {
+                      color: #5bb374;
+                    }
+                    &.failure {
+                      color: #f15151;
+                    }
+                  }
+                }
+              }
+            }
+           
+        }
+    }
+    
+
+    .rebate-history-card-body{
+        .rebate-history-card-item {
+            padding: 19px 33px;
+            border-bottom: 1px solid #f1efef;
+            border-left: 1px solid #f1efef;
+            border-right: 1px solid #f1efef;
+            background: #fff;
+            .cl-item {
+              display: inline-block;
+              width: 50%;
+              font-size: 12px;
+              &.rebate-history-card-text {
+                text-align: left;
+                color: #95969a;
+              }
+              &.rebate-history-card-value {
+                text-align: left;
+                float: right;
+                min-width: 80px;
+                width: auto;
+                p {
+                  &.cl-card-amount {
+                    color: #ff934c;
+                    span {
+                      color: #fc686f;
+                    }
+                  }
+                  &.cl-card-status {
+                    color: #fc686f;
+                  }
+                }
+              }
+            }
+        }
+    }
+    .promo-history-card-body{
+        .promo-history-card-item {
+        padding: 19px 33px;
+        border-bottom: 1px solid #f1efef;
+        border-left: 1px solid #f1efef;
+        border-right: 1px solid #f1efef;
+        background: #fff;
+        .cl-item {
+            display: inline-block;
+            width: 50%;
+            font-size: 12px;
+            &.promo-history-card-text {
+            text-align: left;
+            color: #95969a;
+            }
+            &.promo-history-card-value {
+            float: right;
+            min-width: 55px;
+            width: auto;
+            text-align: left;
+            p {
+                &.cl-card-amount {
+                color: #ff934c;
+                span {
+                    color: #fc686f;
+                }
+                }
+                &.cl-card-status {
+                &.success {
+                    color: #5bb374;
+                }
+                &.failure {
+                    color: #f15151;
+                }
+                }
+            }
+            }
+        }
+        }
+    }
+
+    .no-transactions {
+        height: 416px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #95969a;
+        min-height: 100%;
+        padding-top: 166px;
+        // justify-content: center;
+        .image-box {
+          background: url(../../../pwa/assets/img/profile/svg/open-box.svg) no-repeat center center/contain;
+          width: 180px;
+          height: 156px;
+          display: inline-block;
+          margin-bottom: 23px;
+        }
+        span {
+          font-size: 16px;
+        }
+    }
+
+}

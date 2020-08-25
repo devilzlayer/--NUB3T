@@ -1,0 +1,535 @@
+.vip-maincontainer{
+    position: relative;
+    background: url(../img/vip/vip_bg.png);
+    &.fixed{
+        z-index: 1001;
+    }
+    .vip-bannerbg{
+        background: url(../img/vip/vipbannerbg.png) no-repeat center center/cover;
+        width: 100%;
+        height: 431px; 
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .vip-wrapper{
+        max-width: 1200px;
+        position: relative;
+        margin: auto;
+        z-index: 2;
+        .vip-header{
+            .vip-head{
+                padding: 77px 0 155px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .vip-head-text {
+                    &.vipT1{
+                        background: url(../img/vip/vipText1.png) no-repeat center center/cover;
+                        width: 218px;
+                        height: 59px;
+                    }
+                    &.vipT2{
+                        background: url(../img/vip/vipText2.png) no-repeat center center/cover;
+                        width: 166px;
+                        height: 59px;
+                    }
+                    // font-family: BenmoJinhei;
+                    // font-size: 60px;
+                    margin: 0 46px;
+                    // text-shadow: 0px 1px 0.61px rgba(0, 0, 0, 0.28);
+                    // letter-spacing: 34px;
+                    // background: linear-gradient(46deg, #dcb346, #f7d68c 49%, #daaf3f 99%);
+                    // -webkit-background-clip: text;
+                    // -webkit-text-fill-color: transparent;
+                    
+                      
+                }
+                .vip-head-icon{
+                    background: url(../img/vip/icons/vip-icon_mob.svg) no-repeat center center/cover;
+                    width: 238px;
+                    height: 258px; 
+                }
+            }
+            .vip-icons-container{
+                min-height: 83px;
+                height: 100%;
+            }
+            .vip-icons{
+                &.fixed{
+                    position: fixed;
+                    // top: -123px;
+                    top: 0;
+                    transition: all .2s ease-in-out;
+                    left: 0;
+                    width: 100%;
+                    z-index: 1001;
+                    background: #f9f4ed;
+                    padding: 20px 0;
+                    &.animate{
+                        top: 0;
+                    }
+                }
+                .vip-icons-wraps{
+                    margin: auto;
+                    max-width: 1200px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 15px;
+                    .vip-icons-list-item{
+                        text-align: center;
+                        transition: all .2s ease-in-out;
+                        cursor: pointer;
+                        &:hover ,&.active{
+                            transform: scale(1.2);
+                        }
+                        span{
+                            color: #bab9b9;
+                            font-size: 14px;
+                            margin-top: 11px;
+                            display: block;
+                        }
+                        @for $i from 0 through 10 {
+                            .vip-icon-item-#{$i}{
+                                background: url(../img/vip/badge/vip-badge#{$i}.png) no-repeat center center/cover;
+                                width: 53px;
+                                height: 53px; 
+                                
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        .vip-body {
+            padding-top: 80px;
+            padding-bottom: 90px;
+            .vip-body-section{
+                .vip-section-title {
+                    text-align: center;
+                    font-size: 23px;
+                    color: #c29e72;
+                    font-weight: bold;
+                    span{
+                        position: relative;
+                        display: inline-block;
+                        padding: 0 25px;
+                        &:before{
+                            content: '';
+                            background: linear-gradient(90deg, #d0b695, #c29e72, rgba(255, 255, 255, 0));
+                            position: absolute;
+                            width: 245px;
+                            height: 1px;
+                            top: 50%;
+                            left: 100%;
+                        }
+                        &:after{
+                            content: '';
+                            background: linear-gradient(-90deg, #d0b695, #c29e72, rgba(255, 255, 255, 0));
+                            position: absolute;
+                            width: 245px;
+                            height: 1px;
+                            top: 50%;
+                            right:100%;
+                        }
+                    }
+                }
+            }
+            .vip-banner-data {
+                max-width: 355px;
+                margin: auto;
+                .vip-banner-card-wrap{
+                    width: 352px;
+                    height: 150px; 
+                    position: relative;
+                }
+                .vip-banner-card{
+                    position: absolute;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: all .2s ease-in-out;
+                    @for $i from 0 through 10 {
+                        &.vip#{$i}{
+                            background: url(../../pwa/assets/img/vip/banners/vip-banner#{$i}.png) no-repeat center center/cover;
+                            width: 352px;
+                            height: 150px;    
+                            &.unlocked{
+                                background: url(../../pwa/assets/img/vip/banners/unlocked/vip-banner-unlocked#{$i}.png) no-repeat center center/cover;
+                            } 
+                        }
+                    }
+                    &.active{
+                        z-index: 2;
+                        opacity: 1;
+                    }
+                }
+                
+                .vip-data-range-wrap {
+                    padding: 50px 0 80px;
+                    .vip-data-range {
+                        display: flex;
+                        position: relative;
+                        justify-content: space-between;
+                        align-items: center;
+                        .vip-data-range-span {
+                            font-size: 14px;
+                            color: #39404d;
+                            position: relative;
+                            padding-left: 30px;
+                            @for $i from 0 through 10 {
+                                &.vp-#{$i}{
+                                    &:before{
+                                        background: url(../../pwa/assets/img/vip/icon/vip#{$i}.png) no-repeat center center/cover;
+                                        width: 24px;
+                                        height: 24px;    
+                                        content: '';
+                                        position: absolute;
+                                        left: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+
+                                }
+                            }
+                        }
+                        .vip-data-range-line {
+                            flex: 1 1;
+                            background: #39404d;
+                            height: 5px;
+                            border-radius: 2.5px;
+                            position: relative;
+                            margin: 0 5px;
+                            .vip-data-per-val {
+                                position: absolute;
+                                top: -25px;
+                                left: 0;
+                                transition: all .5s ease-in-out;
+                            }
+                            .vip-data-per-range {
+                                position: absolute;
+                                width: 0;
+                                height: 100%;
+                                background: #6aaffe;
+                                border-radius: 10px;
+                                border: 0;
+                                transition: all 0.5s ease-in-out;
+                            }
+                        }
+                    }
+                    .vip-wrap-t-b-caption {
+                        text-align: center;
+                        margin-top: 20px;
+                        font-size: 14px;
+                        color: #39404d;
+                    }
+                }
+            }
+
+            
+            .vip-body-data{
+                padding: 71px 85px 110px;
+                .vip-card-wrap {
+                    position: relative;
+                    height: 313px;
+                    overflow: hidden;
+                    .vip-card-item{
+                        display: flex;
+                        justify-content: space-between;
+                        position: absolute;
+                        width: 100%;
+                        z-index: 1;
+                        opacity: 0;
+                        top: -100%;
+                        transition: all .5s ease-in-out;
+                        &.active{
+                            z-index: 2;
+                            opacity: 1;
+                            top: 0;
+                        }
+                        .vip-card-item-box{
+                            padding-top: 46px;
+                            .vci-box-icon {
+                                position: absolute;
+                                width: 92px;
+                                height: 92px;
+                                background-color: #f4f8f9;
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                border-radius: 100%;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                top: -46px;
+                                z-index: 2;
+                                &.rocket{
+                                    background-image: url(../img/vip/icons/rocket.png);
+                                }
+                                &.pocket{
+                                    background-image: url(../img/vip/icons/pocket.png);
+                                }
+                                &.graph{
+                                    background-image: url(../img/vip/icons/graph.png);
+                                }
+                                &.coins{
+                                    background-image: url(../img/vip/icons/coin.png);
+                                }
+                            }
+                            
+                            
+                            .vci-box-cont{
+                                width: 227px;
+                                height: 267px;
+                                background-color: #d8d8d8;
+                                border-radius: 10px;
+                                position: relative;
+                                padding: 13px;
+                                box-shadow: 0px 1px 5.52px 2.48px rgba(0, 0, 0, 0.02);
+                                .vci-box-body {
+                                    display: flex;
+                                    width: 100%;
+                                    min-height: 100%;
+                                    position: relative;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    padding: 0 20px;
+                                    box-shadow: 0px 1px 5.52px 2.48px rgba(0, 0, 0, 0.02);
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+                                    background-size: 215px 251px;
+                                    &.rocket{
+                                        background-image: url(../img/vip/box/box1.png);
+                                    }
+                                    &.pocket{
+                                        background-image: url(../img/vip/box/box2.png);
+                                    }
+                                    &.graph{
+                                        background-image: url(../img/vip/box/box3.png);
+                                    }
+                                    &.coins{
+                                        background-image: url(../img/vip/box/box4.png);
+                                    }
+                                    .vci-box-body-value {
+                                        color: #fff;
+                                        padding-bottom: 30px;
+                                        display: flex;
+                                        span{
+                                            font-size: 38px;
+                                            display: inline-block;
+                                            position: relative;
+                                            top: 7px;
+                                            small{
+                                                font-size: 32px;
+                                            }
+                                        }
+                                        .val{
+                                            font-size: 64px;
+                                            line-height: 60px;
+                                            top: 0;
+                                        }
+                                    }
+                                    .vci-box-body-caption {
+                                        color: #fff;
+                                        font-size: 20px;
+                                        width: 100%;
+                                        text-align: center;
+                                        padding: 25px 0;
+                                        border-top: 1px dashed #fff;
+                                    }
+                                }
+                                &.rocket{
+                                    background: linear-gradient(138deg, #89f7fe 0%, #66a6ff 100%)
+                                }
+                                &.pocket{
+                                    background: linear-gradient(138deg, #7683d9 0%, #d8a0fe 100%)
+                                }
+                                &.graph{
+                                    background: linear-gradient(138deg, #f6bf9f 0%, #db8ade 100%)
+                                }
+                                &.coins{
+                                    background: linear-gradient(138deg, #8ffca0 0%, #0bcbfb 100%)
+                                }
+
+                               
+                                  
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+
+            .vip-body-grid {
+                padding: 105px 0;
+                .vip-grid-wrap{
+                    max-width: 1028px;
+                    width: 100%;
+                    min-height: 373px;
+                    max-height: 373px;
+                    height: 100%;
+                    background: #fff;
+                    border-radius: 10px;
+                    margin: auto;
+                    position: relative;
+                    overflow: hidden;
+                    .vip-grid-item {
+                        position: absolute;
+                        bottom: -100%;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        opacity: 0;
+                        padding: 55px 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        transition: all .5s ease-in-out;
+                        &.active{
+                            z-index: 2;
+                            opacity: 1;
+                            bottom: 0;
+                        }
+                        .vip-s-i-body-cont-item {
+                            flex: 1 1 33.33%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .vip-s-i-body-cont-item-title {
+                                font-size: 63.9px;
+                                color: #c29e72;
+                                font-family: Acumin;
+                                font-weight: bold;
+                                text-align: center;
+                            }
+                            .vip-s-i-body-cont-item-text {
+                                text-align: center;
+                                font-size: 20px;
+                                color: #39404d;
+                            }
+                        }
+                    }
+                }
+            }
+            
+
+            .vip-body-table{
+                padding: 75px 0 95px;
+                .vip-body-table-wrap {
+                    display: flex;
+                    max-width: 1129px;
+                    margin: auto;
+                    .vip-body-table-col {
+                        flex-grow: 1;
+                        flex-basis: 0;
+                        .v-body-t-r-box{
+                            color: #6d7b96;
+                            font-size: 16px;
+                            text-align: center;
+                            padding: 18.38px 0px;
+                            background: #f0f4fb;
+                            border-right: 1px solid #fff;
+                            border-bottom: 1px solid #fff;
+                            position: relative;
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            &:last-child{
+                                border-bottom: 0;
+                            }
+                            &.title{
+                                background: #c2a788;
+                                color: #fff;
+                                &.active{
+                                    
+                                    &:before{
+                                        content: '';
+                                        position: absolute;
+                                        width: 100%;
+                                        height: calc(100% + 19px);
+                                        left: 0;
+                                        bottom: 0;
+                                        background: linear-gradient( -46deg, rgb(70,174,247) 0%, rgb(29,213,230) 100%);
+                                    }
+                                    @for $i from 0 through 10 {
+                                        &.vip#{$i}{
+                                            &:after{
+                                                background: url(../../pwa/assets/img/vip/icon/vip#{$i}.png) no-repeat center center/cover;
+                                                width: 31px;
+                                                height: 31px;    
+                                                content: '';
+                                                position: absolute;
+                                                left: 50%;
+                                                transform: translateX(-50%);
+                                                bottom: 100%;
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                            &.active{
+                                background: linear-gradient( -46deg, rgb(70,174,247) 0%, rgb(29,213,230) 100%);
+                                color: #fff;
+                            }
+                        }
+                        &:last-child{
+                            .v-body-t-r-box{
+                                border-right: 0;
+                            }
+                            
+                        }
+                    }
+                }
+
+            }
+            .vip-body-rules{
+                padding-top: 100px;
+                padding-left: 150px;
+                padding-right: 150px;
+                .vip-body-rules-section{
+                    margin-bottom: 52px;
+                    
+                    .vip-body-rules-title {
+                        margin-bottom: 18px;
+                        font-size: 18px;
+                        color: #46aef7;
+                        font-weight: bold;
+                        background: linear-gradient(46deg, #46aef7  , #1dd5e6 );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    .vip-body-rules-parag {
+                        font-size: 16px;
+                        color: #2e384d;
+                        line-height: 25px;
+                        margin-bottom: 5px;
+                    }
+                    
+                    .vip-body-rules-caption {
+                        font-size: 16px;
+                        color: #8798ad;
+                    }
+                }
+                
+
+            }
+
+            .vip-footer {
+                text-align: center;
+                font-size: 16px;
+                color: #8798ad;
+                padding-top: 50px;
+            }
+
+        }
+    }
+}

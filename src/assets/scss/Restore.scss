@@ -1,0 +1,280 @@
+@import "_mixin";
+
+.restoree-wrap {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: url(../img/login/bgnew.png) no-repeat center center/cover;
+
+  .restore-form {
+    margin: auto 0;
+    &-wrap {
+      padding: 20px 0;
+      height: 100%;
+    }
+    &-outer {
+      .load-spin {
+        @include radius(10px);
+      }
+    }
+    &-outer-bottom {
+      width: 442px;
+      .load-spin {
+        @include radius(10px);
+      }
+      overflow: hidden;
+      background-color: rgba(#fff, 0.33);
+      padding: 0 40px;
+      @include radius(10px);
+      @include shadow(0 4px 16px rgba(42, 51, 84, 0.12));
+      margin-bottom: 30px;
+    }
+    &-inner {
+      height: 480px;
+    }
+  }
+  .restore-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .divider {
+    text-align: center;
+    position: relative;
+    color: #a3cff8;
+    font-size: 12px;
+    margin-bottom: 10px;
+    width: 410px;
+    &:before {
+      position: absolute;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        rgba(82, 164, 235, 0.2637) 11%,
+        rgba(82, 164, 235, 0.5158) 24%,
+        rgba(105, 170, 232, 1) 57%,
+        rgba(105, 170, 232, 0.7119) 89%,
+        rgba(105, 170, 232, 0.32217) 95%
+      );
+      width: 165px;
+      height: 1px;
+      top: 50%;
+      left: 0;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        rgba(105, 170, 232, 0.34217) 5%,
+        rgba(105, 170, 232, 0.7119) 11%,
+        rgba(105, 170, 232, 1) 43%,
+        rgba(82, 164, 235, 0.5158) 68%,
+        rgba(82, 164, 235, 0.2637) 89%
+      );
+      width: 165px;
+      height: 1px;
+      top: 50%;
+      right: 0;
+    }
+    @media screen and (max-width: 375px) {
+      &::before,
+      &:after {
+        width: 100px;
+      }
+    }
+  }
+
+  .sub-logo {
+    background: url(../img/login/FC-Augsburg_logo.svg) no-repeat center
+      center/contain;
+    // margin: 12px auto 5px;
+    @include size(25px, 32px);
+  }
+  .sub-text {
+    color: #a3cff8;
+    font-size: 12px;
+    text-align: center;
+    margin: 5px 0 30px;
+  }
+
+  .ui-tabs {
+    background: url(../img/login/tab.svg) no-repeat center center/contain;
+    height: 54px;
+    box-shadow: none;
+    margin: 0 0 60px;
+    &:after {
+      border: none;
+    }
+    .ui-tabs--tab {
+      color: #b5dbf8;
+      font-weight: normal;
+      font-size: 14px;
+      &.active {
+        cursor: default;
+        padding: 11px;
+        padding-left: 85px;
+        color: #fff;
+        font-size: 22px;
+      }
+      &.nonactive {
+        width: 25%;
+        text-align: right;
+        padding: 5px;
+      }
+    }
+  }
+
+  .logo {
+    margin: 0 auto 12px auto;
+    background: url(../img/login/ubet_white_text_logo.svg) no-repeat center
+      center/cover;
+    background-size: contain;
+    @include size(196px, 75px);
+  }
+
+  .form {
+    text-align: center;
+    &-inner-content {
+      padding-bottom: 20px;
+
+      p {
+        text-align: left;
+        position: absolute;
+      }
+      &.signup {
+        padding-bottom: 30px;
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+    .form-button {
+      height: 42px;
+      box-sizing: border-box;
+      outline: none;
+      margin: 70px auto 0;
+      width: 180px;
+      font-weight: 400;
+      padding: 11px;
+      @include radius(5px);
+      @include gradient2(100deg, #e1deda, #dddcd7 45%, #d2cec7 100%);
+      color: #fff;
+      font-size: 14px;
+    }
+    .form-button-active {
+      @include gradient2(0deg, #a1c4fd, #c2e9fb 100%);
+    }
+
+    a {
+      line-height: 17px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .form-field {
+      margin: 0 0 20px;
+      border-bottom: 1px rgba(#fff, 0.5) solid;
+
+      &.verification {
+        padding: 0 0 8px;
+        input {
+          text-align: left;
+          font-size: 14px;
+          padding-left: 5px;
+          margin-right: 5px;
+          width: calc(100% - 115px);
+          background: none;
+          color: #fff;
+          border: none;
+          &::placeholder {
+            color: #fff;
+            font-weight: 400;
+          }
+        }
+
+        button.code {
+          cursor: default;
+          outline: none;
+          display: inline;
+          box-sizing: border-box;
+          border: 1px solid rgba(#fff, 0.33);
+          padding: 5px 15px;
+          font-size: 14px;
+          color: rgba(#fff, 0.33);
+          border-radius: 5px;
+        }
+        button.active {
+          cursor: pointer;
+          border: 1px solid #fff;
+          color: #fff;
+        }
+      }
+    }
+
+    label {
+      display: inline-block;
+      font-size: 14px;
+      padding-left: 5px;
+      text-align: left;
+      width: 70px;
+      color: #fff;
+    }
+
+    .form-field--input-wrap {
+      position: relative;
+      display: inline-block;
+      width: calc(100% - 70px);
+
+      input {
+        border: none;
+        border-radius: 0;
+        background: none;
+        color: #fff;
+        font-size: 15px;
+        text-align: right;
+        padding-right: 5px;
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: 400;
+        }
+        &:-webkit-autofill {
+          // background: red;
+          -webkit-text-fill-color: #fff;
+          -webkit-text-fill-color: none;
+          -webkit-box-shadow: 0 0 0px 1000px #fff0 inset;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+      }
+    }
+
+    .support {
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      color: #fff;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .auth-forms {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 70px;
+    @include transition(transform 0.2s ease);
+    .form {
+      min-width: 100%;
+      opacity: 0;
+      pointer-events: none;
+      @include transition(opacity 0.2s ease);
+    }
+  }
+}

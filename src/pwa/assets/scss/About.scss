@@ -1,0 +1,260 @@
+@import "../../../assets/scss/mixin";
+
+.about-wrap {
+  .profile-wrap-sa-content {
+    padding-bottom: 0 !important;
+  }
+  .logo {
+    margin: 0 auto 10px;
+    // background: url(../../../assets/img/png/icon512.png) no-repeat center center/cover;
+    background: url(../img/about/logo-about.svg) no-repeat center center/cover;
+    @include size(64px, 64px);
+    @include radius(10px);
+    // @include shadow(0 8px 24px rgba(#000, .1));
+  }
+  .divider {
+    text-align: center;
+    position: relative;
+    color: #04a0f9;
+    font-size: 22px;
+    margin-bottom: 25px;
+    background: linear-gradient(-47deg, #46aef7, #1dd5e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:before {
+      position: absolute;
+      content: "";
+      background: linear-gradient(
+        -90deg,
+        #aacdef,
+        #69aae8,
+        rgba(255, 255, 255, 0)
+      );
+      width: 150px;
+      height: 1px;
+      top: 50%;
+      left: 0;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        #aacdef,
+        #69aae8,
+        rgba(255, 255, 255, 0)
+      );
+      width: 150px;
+      height: 1px;
+      top: 50%;
+      right: 0;
+    }
+    @media screen and (max-width: 420px) {
+      &::before,
+      &:after {
+        width: 120px;
+      }
+    }
+    @media screen and (max-width: 375px) {
+      &::before,
+      &:after {
+        width: 100px;
+      }
+    }
+  }
+  .about-wrapper {
+    margin-left: -20px;
+    margin-right: -20px;
+    background: #fff;
+    padding: 41px 22px;
+    box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+  }
+  h1 {
+    text-align: center;
+    margin: 0 0 22px;
+    color: #1e1e1e;
+    @include font(22px, 400);
+  }
+  p {
+    margin: 0 0 22px;
+    color: #646464;
+    @include font(13px, normal);
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .about-licenses {
+    // margin: 40px 0 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    .about-fca-logo-wrap {
+      position: relative;
+      padding-top: 48px;
+      padding-bottom: 46px;
+      &:before {
+        position: absolute;
+        content: "";
+        background: url(../img/about/about-us_bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        width: 100%;
+        min-height: 100vh;
+        bottom: 0;
+        left: 0;
+      }
+      .about-fca-logo-wrap-content {
+        position: relative;
+        z-index: 1;
+        padding: 0 45px;
+
+        h2 {
+          position: relative;
+          text-align: center;
+          color: #fff;
+          font-size: 22px;
+          font-weight: normal;
+          &:before {
+            position: absolute;
+            content: "";
+            background: linear-gradient(-90deg, #fff, rgba(255, 255, 255, 0));
+            width: 100px;
+            height: 1px;
+            top: 50%;
+            left: 0;
+          }
+          &:after {
+            position: absolute;
+            content: "";
+            background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+            width: 100px;
+            height: 1px;
+            top: 50%;
+            right: 0;
+          }
+          @media screen and (max-width: 420px) {
+            &::before,
+            &:after {
+              width: 85px;
+            }
+          }
+          @media screen and (max-width: 375px) {
+            &::before,
+            &:after {
+              width: calc((100vw - 240px) / 2);
+            }
+          }
+        }
+      }
+    }
+    .licenses-grid-wrap {
+      padding-left: 30px;
+      padding-right: 30px;
+      h2 {
+        position: relative;
+        text-align: center;
+        color: #000;
+        font-size: 22px;
+        font-weight: normal;
+        width: 100%;
+        margin-top: 57px;
+        margin-bottom: 44px;
+        &:before {
+          position: absolute;
+          content: "";
+          background: linear-gradient(-90deg, #000, rgba(255, 255, 255, 0));
+          width: 100px;
+          height: 1px;
+          top: 50%;
+          left: 0;
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          background: linear-gradient(90deg, #000, rgba(255, 255, 255, 0));
+          width: 100px;
+          height: 1px;
+          top: 50%;
+          right: 0;
+        }
+        @media screen and (max-width: 420px) {
+          &::before,
+          &:after {
+            width: 100px;
+          }
+        }
+        @media screen and (max-width: 375px) {
+          &::before,
+          &:after {
+            width: calc((100vw - 210px) / 2);
+          }
+        }
+      }
+    }
+  }
+  h3 {
+    // color: #888888;
+    text-align: center;
+    // @include font(16px, 500);
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal;
+    margin: auto;
+  }
+  .fca-logo {
+    background: url(../../../assets/img/about/logo.fca.svg) no-repeat center
+      center/cover;
+    margin: 17px auto 24px;
+    // @include size(86px, 118px);
+    @include size(61px, 80px);
+  }
+  .licenses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    // margin: 30px auto 60px;
+    margin: 0px auto 60px;
+    .lg--item {
+      width: 50%;
+      text-align: center;
+      margin: 0 0 48px;
+      &:nth-last-child(-n + 2) {
+        margin: 0;
+      }
+      .name {
+        color: #888888;
+        @include font(16px, 400);
+      }
+      .icon {
+        margin: 0 auto 12px;
+        background: no-repeat center center/cover;
+      }
+      &.gc {
+        .icon {
+          background-image: url(../../../assets/img/about/logo.gc.svg);
+          @include size(111px, 30px);
+        }
+      }
+      &.mga {
+        .icon {
+          background-image: url(../../../assets/img/about/logo.mga.png);
+          @include size(153px, 30px);
+        }
+      }
+      &.pc {
+        .icon {
+          background-image: url(../../../assets/img/about/logo.pg.svg);
+          @include size(42px, 42px);
+        }
+      }
+      &.gc2 {
+        .icon {
+          background-image: url(../../../assets/img/about/logo.gc.png);
+          @include size(129px, 42px);
+        }
+      }
+    }
+  }
+}

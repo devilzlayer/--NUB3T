@@ -1,0 +1,73 @@
+@import '_mixin';
+
+@font-face {
+	font-family: 'Noto Sans SC2';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Noto Sans SC Regular'), local('NotoSansSC-Regular'),
+		url(../font/noto-sans-sc-v11-latin-regular.woff2) format('woff2'),
+		url(../font/noto-sans-sc-v11-latin-regular.woff) format('woff');
+}
+
+.ticker-wrap {
+	padding: 20px 120px 20px 20px;
+	white-space: nowrap;
+	cursor: pointer;
+	max-width: 1200px;
+	margin: auto;
+	position: relative;
+	p {
+		color: #55687d;
+		font: 400 16px 'Noto Sans SC2';
+		margin: 0 10px 0 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	.ticker-online-service-wrap {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		padding-left: 40px;
+		z-index: 1;
+		.ticker-online-service-icon {
+			background: url(../img/svg/csr.svg) no-repeat center center/cover;
+			width: 34px;
+			height: 34px;
+			// background: #02a2fb;
+			border-radius: 100%;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			// &:before {
+			// 	position: absolute;
+			// 	content: "";
+			// 	width: 34px;
+			// 	height: 34px;
+			// 	top: -2px;
+			// 	left: -2px;
+			// 	border: 1px solid #02a2fb;
+			// 	border-radius: 100%;
+			// }
+			// i {
+			// 	// background: #fff;
+			// 	background: url(../img/svg/csr.svg) no-repeat center center/cover;
+			// 	width: 334px;
+			// 	height: 30px;
+			// 	display: block;
+			// 	border-radius: 100%;
+			// 	position: absolute;
+			// 	top: 50%;
+			// 	left: 50%;
+			// 	transform: translate(-50% , -50%);
+			// }
+		}
+		.ticker-text-online-service {
+			font-size: 16px;
+			color: #02a2fb;
+		}
+		
+	}
+}

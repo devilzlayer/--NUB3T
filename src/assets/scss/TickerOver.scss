@@ -1,0 +1,123 @@
+@import '_mixin';
+
+.ticker-over-sa {
+	@include overlay();
+	position: fixed;
+	overflow-y: auto;
+	overflow-x: hidden;
+	&.news{
+		background: none !important;
+
+	}
+	&--sublayer {
+		max-width: 716px;
+		width: 100%;
+		position: relative;
+		z-index: 2;
+		.nt-head{
+			margin-bottom: 40px;
+			h2 {
+				text-align: center;
+				font-size: 19px;
+				color: #46aef7;
+				font-weight: normal;
+			}
+		}
+		.nt-body {
+			max-height: 275px;
+			height: 100%;
+			overflow: auto;
+			margin-bottom: 40px;
+			&::-webkit-scrollbar {
+				width: 7px;
+			}
+			&::-webkit-scrollbar-track {
+				border-radius: 3.5px;
+				// background: #616161;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: #efecec;
+				border-radius: 3.5px;
+			}
+		}
+	}
+	&--layer {
+		padding: 20px 46px 30px;
+		background: #fff;
+		position: relative;
+		// @include radius(5px);
+		.close {
+			@include size(26px, 26px);
+			@include position(absolute, $z-index: 1000, $top: 20px, $right: 20px);
+		}
+	}
+	h1 {
+		text-align: center;
+		margin: 0 0 10px;
+		color: #c9dadf;
+		@include font(22px, 600);
+	}
+	h2, h2 p, h2 .text-shadow {
+		font-size: 42px;
+	}
+	h2 {
+		p {
+			font-size: 19px;
+			color: #46aef7;
+			// margin: 0;
+
+		}
+	}
+	.nt-list--item {
+		// margin: 24px 0 0;
+		padding-left: 28px;
+		position: relative;
+		margin-bottom: 24px;
+		i{
+			background: url(../img/ticker/announcement-list.svg) no-repeat center center/cover;
+			width: 17px;
+			height: 17px;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		h4 {
+			color: #46aef7;
+			font-size: 14px;
+			font-weight: normal;
+			display: flex;
+			margin-bottom: 17px;
+			.title{
+				max-width: 367px;
+				white-space: nowrap;
+				overflow: hidden;
+				margin-right: 20px;
+			}
+		}
+		p {
+			color: #39404d;
+			font-size: 14px;
+			line-height: 30px;
+		}
+	}
+	.understood{
+		background: linear-gradient( -46deg, rgb(8,177,249) 0%, rgb(4,160,249) 100%);
+		box-shadow: 0px 1px 5.52px 2.48px rgba(0, 0, 0, 0.02);
+		border-radius: 23px;
+		width: 169px;
+		color: #fff;
+		padding: 13.5px;
+		margin: auto;
+		display: block;
+	}
+
+	.ticker-overlaybg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #0000001a;
+	}
+}
